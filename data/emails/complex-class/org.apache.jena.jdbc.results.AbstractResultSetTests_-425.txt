@@ -1,0 +1,16 @@
+Dear XXX,
+
+thanks for reaching out!
+
+Given the class org.apache.jena.jdbc.results.AbstractResultSetTests that you recently modified, I would kindly ask you to answer the following questions.
+
+(1) Were you aware of the presence of a design flaw? (Please answer Yes/No)
+Yes
+
+(2) If yes to question (1), may you please briefly describe the type of design flaw affecting the class?
+I see that an external notes that the design of the class could be improved (there are too many methods that do too many things), but I use to develop on this class and refactoring may be done at some point. 
+
+(3) If yes to question (1), may you please rate the criticality of the design flaw from 1 (very low) to 5 (very high)?
+3
+
+cheers,\nXXX

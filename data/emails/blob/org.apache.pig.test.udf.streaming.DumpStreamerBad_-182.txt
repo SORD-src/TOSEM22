@@ -1,0 +1,16 @@
+Hi XXX,
+
+thanks for reaching out!
+
+Given the class org.apache.pig.test.udf.streaming.DumpStreamerBad that you recently modified, I would kindly ask you to answer the following questions.
+
+(1) Were you aware of the presence of a design flaw? (Please answer Yes/No)
+Yes
+
+(2) If yes to question (1), may you please briefly describe the type of design flaw affecting the class?
+the code looks horrible here, but we need to deliver and dont have time for that.
+
+(3) If yes to question (1), may you please rate the criticality of the design flaw from 1 (very low) to 5 (very high)?
+3
+
+Kind regards,\nXXX

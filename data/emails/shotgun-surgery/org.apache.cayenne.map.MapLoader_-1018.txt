@@ -1,0 +1,17 @@
+Hi XXX,
+
+I see the problem.
+
+Given the class org.apache.cayenne.map.MapLoader that you recently modified, I would kindly ask you to answer the following questions.
+
+(1) Were you aware of the presence of a design flaw? (Please answer Yes/No)
+Yes
+
+(2) If yes to question (1), may you please briefly describe the type of design flaw affecting the class?
+there might be the need to better divide the methods of the class.
+
+(3) If yes to question (1), may you please rate the criticality of the design flaw from 1 (very low) to 5 (very high)?
+5
+
+bye,
+XXX

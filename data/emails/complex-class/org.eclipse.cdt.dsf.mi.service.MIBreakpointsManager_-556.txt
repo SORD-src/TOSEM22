@@ -1,0 +1,16 @@
+Greetings,
+
+thank you for the email.
+
+Given the class org.eclipse.cdt.dsf.mi.service.MIBreakpointsManager that you recently modified, I would kindly ask you to answer the following questions.
+
+(1) Were you aware of the presence of a design flaw? (Please answer Yes/No)
+Yes
+
+(2) If yes to question (1), may you please briefly describe the type of design flaw affecting the class?
+the class contains too many loops and this has the effect of making it hard to read. It is possible to improve its design tough
+
+(3) If yes to question (1), may you please rate the criticality of the design flaw from 1 (very low) to 5 (very high)?
+3
+
+Cheers,\nXXX

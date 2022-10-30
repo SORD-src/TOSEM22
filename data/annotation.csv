@@ -1,0 +1,3040 @@
+smell,class,criticality,comments,coupling,changehistory,cohesion,size,complexity,production,testing
+complex-class,jena.schemagen,1,"
+poorly understandable.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cassandra.cli.CliClient,1,"
+the client has some problems and does too many things. However, since it doesnt change too much, I would not consider this as a priority. 
+",0,1,0,0,0,1,0
+complex-class,org.apache.cassandra.config.CFMetaData,1,"
+the class is overly complex, at some point someone should simplify it.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cassandra.config.DatabaseDescriptor,1,"
+too many loops that could be simplified, too many conditions checked. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.cassandra.cql3.statements.SelectStatement,1,"
+the complexity may be reduced, but this is not the moment. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.cassandra.db.ColumnFamilyStore,1,"
+the class is generally complex because it performs some tasks needed for the DB management, it is hard to understand how to refactor.
+",0,0,0,0,1,1,0
+complex-class,org.apache.cassandra.db.SystemKeyspace,1,"
+it may be refactored for comprehensibility, but it works and so there is no need now to do it. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.cassandra.gms.Gossiper,1,"
+the class is surely poorly understandable, yet I would postpone the refactoring till its stable.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cassandra.io.sstable.SSTableReader,1,"
+this is something we were considering since the class is complex enough not to allow everybody to work on it. We will do that at some oiint.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cassandra.service.StorageService,1,"
+the service is a legacy code
+",0,0,0,0,0,1,0
+complex-class,org.apache.cassandra.service.StorageServiceMBean,1,"
+the class is too complex.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cassandra.thrift.CassandraServer,1,"
+the sever actions are legacy, but a refactoring aimed at reducing its complexity may be worth.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cassandra.thrift.CfDef,1,"
+this class would need some massaging to increase readability, but is not that urgent IMO
+",0,0,0,0,1,0,0
+complex-class,org.apache.cassandra.tools.NodeProbe,1,"
+a number of loops may be simplified. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.cayenne.access.translator.ejbql.EJBQLConditionTranslator,2,"
+there are too many conditions covered, it needs to be found a way to simplify the class.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cayenne.dba.oracle.OracleResultSetWrapper,2,"
+it wraps too many arguments and this makes the class unreadable.
+",0,0,0,1,0,0,0
+complex-class,org.apache.cayenne.exp.ExpressionFactory,2,"
+the factory is hard to understand and every time I make a change I spend a lot of time.
+",0,1,0,0,1,1,0
+complex-class,org.apache.cayenne.map.DataMap,2,"
+It is an extreme case of complexity that may be solved.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cayenne.map.MapLoader,2,"
+this is a complex class with too many methods
+",0,0,0,0,1,0,0
+complex-class,org.apache.cayenne.map.ObjEntity,2,"
+i am aware of the high complexity of the class, i am currently working to reduce it.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cayenne.modeler.ProjectController,2,"
+it is too complex, should be refactored.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.jaxrs.client.AbstractClient,0,"
+it is an abstract class, does nto require changes despite it could have been designed better.
+",0,1,0,0,0,0,0
+complex-class,org.apache.cxf.jaxrs.client.WebClient,0,"
+this is not really a problem since it doesn't change too much.
+",0,1,0,0,0,0,0
+complex-class,org.apache.cxf.jaxrs.impl.UriBuilderImpl,2,"
+the class is too complex
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.jaxrs.impl.UriBuilderImplTest,0,"
+as long as the test finds bugs, it is ok to have complexity. 
+",0,0,0,1,1,0,1
+complex-class,org.apache.cxf.jaxrs.provider.JAXBElementProviderTest,0,"
+again, the test works well.
+",0,0,0,0,0,0,1
+complex-class,org.apache.cxf.jaxrs.provider.json.JSONProviderTest,0,"
+again, the test works well.
+",0,0,0,0,0,0,1
+complex-class,org.apache.cxf.jaxrs.utils.InjectionUtils,0,"
+thanks for your email. I see the problem of the class, but I can still apply changes to it so I do not need now to refactor.
+",0,1,0,0,0,0,0
+complex-class,org.apache.cxf.jaxrs.utils.JAXRSUtils,0,"
+thanks for your email. I see the problem of the class, but I can still apply changes to it so I do not need now to refactor.
+",0,1,0,0,0,0,0
+complex-class,org.apache.cxf.jaxrs.utils.JAXRSUtilsTest,0,"
+thanks for your email. I see the problem of the class, but I can still apply changes to it so I do not need now to refactor.
+",0,1,0,0,0,0,0
+complex-class,org.apache.cxf.rs.security.jose.jwe.JweUtils,0,"
+it is just a class with some methods useful for others, it is complex because it is mixed… but is OK.
+",0,0,0,0,1,1,0
+complex-class,org.apache.cxf.rt.security.crypto.CryptoUtils,0,"
+it is just a class with some methods useful for others, it is complex because it is mixed… but is OK.
+",0,0,0,0,1,1,0
+complex-class,org.apache.cxf.staxutils.StaxUtils,2,"
+this is a utility class, but since it is changed frequently it would be worth to simplify.
+",0,1,0,0,1,1,0
+complex-class,org.apache.cxf.systest.handlers.HandlerInvocationTest,2,"
+the complexity should be reduced to allow simpler modifications
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.systest.jaxrs.JAXRSClientServerBookTest,2,"
+it works, but every time I need to modify it I become crazy… 
+",0,1,0,0,0,0,0
+complex-class,org.apache.cxf.systest.jaxrs.JAXRSMultipartTest,2,"
+there are too many paths covered, it shouldn't be so. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.systest.jaxrs.MultipartStore,2,"
+the complexity of this class is notably high, it would need some refactoring.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.systest.sts.batch.SimpleBatchSTSClient,2,"
+""it should be a """"simple"""" batch, but is actually horribly designed… ""
+",0,0,0,0,0,1,0
+complex-class,org.apache.cxf.systest.type_test.AbstractTypeTestClient,2,"
+we are aware this may require some action to improve readability
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.systest.type_test.AbstractTypeTestClient2,2,"
+we are aware this may require some action to improve readability
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.systest.type_test.AbstractTypeTestClient3,2,"
+we are aware this may require some action to improve readability
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.systest.type_test.AbstractTypeTestClient4,2,"
+we are aware this may require some action to improve readability
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.tools.corba.processors.idl.IDLLexer,2,"
+the lexer is problematic per se, but it could be possible to reduce the number of conditions checked by the class.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.tools.corba.processors.idl.IDLParser,2,"
+also in this case, the complexity may be reduced. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.tools.corba.processors.wsdl.WSDLToCorbaHelper,2,"
+it is complex, should be redesigned.
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.ws.rm.persistence.jdbc.RMTxStore,2,"
+it is simply unreadable, it must be fixed. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean,2,"
+too many if conditions, needs refactoring.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jackrabbit.api.security.user.UserManagerSearchTest,2,"
+it is extremely complex!
+",0,0,0,0,1,0,0
+complex-class,org.apache.jackrabbit.commons.JcrUtils,1,"
+a utility class may be like that, I dont see a big problem.
+",0,0,0,0,0,1,0
+complex-class,org.apache.jackrabbit.core.NodeImpl,0,"
+this is a clear case of wrong implementation, that is even hard to fix
+",0,0,0,0,1,0,0
+complex-class,org.apache.jackrabbit.core.query.lucene.SearchIndex,0,"
+the index has almost never touched since time.
+",0,1,0,0,0,0,0
+complex-class,org.apache.jackrabbit.core.RepositoryImpl,0,"
+not really an issue, it doesnt change too often.
+",0,1,0,0,0,0,0
+complex-class,org.apache.jackrabbit.core.SessionImpl,0,"
+while it is poorly understandable, the modifications here are limited.
+",0,1,0,0,1,0,0
+complex-class,org.apache.jackrabbit.jcr2spi.AbstractJCR2SPITest,0,"
+as long as the test finds bugs, it is ok to have complexity. 
+",0,0,0,1,1,0,1
+complex-class,org.apache.jackrabbit.jcr2spi.NodeImpl,0,"
+yeah, I am aware this may be done better. The time I have is limited to simplify it.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jackrabbit.spi.commons.logging.RepositoryServiceLogger,2,"
+this must be simplified, I agree with that. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.jackrabbit.spi.commons.query.qom.QueryObjectModelFactoryImpl,2,"
+the factory implementation borned as a design pattern, but the experiment went wrong… 
+",0,0,0,0,0,1,0
+complex-class,org.apache.jackrabbit.spi.commons.query.sql.JCRSQLParser,2,"
+classes like this one should be simplified, otherwise it is simply impossible to work.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jackrabbit.spi.commons.query.xpath.XPathTokenManager,2,"
+this is too complex, there are too many conditions checked. Perhaps it would be better to split the manager in two.
+",0,0,0,0,1,1,0
+complex-class,org.apache.jackrabbit.spi.RepositoryService,2,"
+it is really complex, I have problems while touching it and I was already considering the idea of removing this class.
+",0,1,0,0,1,0,0
+complex-class,org.apache.jackrabbit.test.api.version.RestoreTest,0,"
+it's a test, so no need to really think about its complexity.
+",0,0,0,0,1,0,1
+complex-class,org.apache.jackrabbit.test.api.version.simple.RestoreTest,0,"
+it's a test, so no need to really think about its complexity.
+",0,0,0,0,1,0,1
+complex-class,org.apache.jackrabbit.test.api.version.VersionHistoryTest,0,"
+it's a test, so no need to really think about its complexity.
+",0,0,0,0,1,0,1
+complex-class,org.apache.jackrabbit.test.api.version.VersionTest,0,"
+it's a test, so no need to really think about its complexity.
+",0,0,0,0,1,0,1
+complex-class,org.apache.jena.atlas.iterator.Iter,1,"
+too many loops, yet sometimes this is required. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.jdbc.connections.AbstractJenaConnectionTests,1,"
+we did some refactoring but the complexity didn't decrease too much.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.jdbc.connections.JenaConnection,1,"
+the connection could actually be simplified.
+",1,0,0,0,1,0,0
+complex-class,org.apache.jena.jdbc.metadata.JenaMetadata,1,"
+it is way too complex for the action it is supposed to do.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.jdbc.metadata.results.MetaResultSet,1,"
+the complexity of this class is not aligned with its functionalities.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.jdbc.results.AbstractResultSetTests,1,"
+I see that an external notes that the design of the class could be improved (there are too many methods that do too many things), but I use to develop on this class and refactoring may be done at some point. 
+",1,0,0,0,0,0,0
+complex-class,org.apache.jena.jdbc.results.JenaResultSet,1,"
+this is hard to understand… but I usually develop here.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.jdbc.statements.AbstractJenaStatementTests,1,"
+i'll do some refactoring, this is actually a bit too complex. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.ontology.impl.OntModelImpl,1,"
+thanks… there are a number of loops that can be simplified.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.ontology.impl.OntResourceImpl,1,"
+this is a case of wrong design that led to high complexity
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.ontology.OntModel,1,"
+the model is hard to modify, it should be redesigned.
+",0,1,0,0,0,0,0
+complex-class,org.apache.jena.ontology.OntResource,1,"
+simplifying it would be good for making newcomers more able to work on it.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.permissions.model.impl.SecuredModelImpl,1,"
+the model could for sure be simplified, I'll consider it.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.permissions.model.SecuredModel,1,"
+the model could for sure be simplified, I'll consider it.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.permissions.model.SecuredModelTest,1,"
+the problem here is that the test is complex because of the class tested. 
+",0,0,0,0,1,0,1
+complex-class,org.apache.jena.query.ParameterizedSparqlString,1,"
+the number of parameters of the class is high, this makes the class poorly understandable. However, it is used by several classes and may be risky to refactor it.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.query.Query,1,"
+this is legacy code that is complex to read but also to refactor.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.rdf.model.impl.ModelCom,1,"
+the components are slightly hard to understand.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.rdf.model.Model,1,"
+too many methods implemented, where each of them uses too many parameters.
+",0,0,0,1,0,0,0
+complex-class,org.apache.jena.rdfxml.xmloutput.impl.Unparser,1,"
+this is a complex activity that requires some more methods.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.sparql.expr.NodeValue,1,"
+> thanks for reaching me out. I'll take a look, the class seems too complex.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.sparql.expr.nodevalue.XSDFuncOp,1,"
+the class is not easily understandable for newcomers. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.sparql.expr.TestFunctions,1,"
+it tests functions, it may be improved but not now.
+",0,0,0,0,0,0,1
+complex-class,org.apache.jena.sparql.expr.TestFunctions2,1,"
+it tests functions, it may be improved but not now.
+",0,0,0,0,0,0,1
+complex-class,org.apache.jena.sparql.lang.arq.ARQParser,1,"
+the parser is naturally complex, it may be improved but still… 
+",0,0,0,0,1,1,0
+complex-class,org.apache.jena.sparql.lang.sparql_10.SPARQLParser10,1,"
+this is a intrinsically complex class.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.sparql.lang.sparql_11.SPARQLParser11,1,"
+this is a intrinsically complex class.
+",0,0,0,0,1,0,0
+complex-class,org.apache.jena.sparql.sse.builders.BuilderExpr,1,"
+the way the expressions are constructed could be improved for readability.
+",0,0,0,0,1,0,0
+complex-class,org.apache.lucene.codecs.lucene50.Lucene50DocValuesProducer,2,"
+the class is poorly cohesive and almost unreadable. 
+",0,0,1,0,0,0,0
+complex-class,org.apache.lucene.index.BaseDocValuesFormatTestCase,2,"
+tests are important. So, it needs to be properly refactored, now it is a collection of things.
+",0,0,0,0,0,0,1
+complex-class,org.apache.lucene.index.IndexWriter,2,"
+the index should be restructured, as is it is too complex.
+",0,0,0,0,1,0,0
+complex-class,org.apache.lucene.index.TestIndexWriter,2,"
+tests are important and especially this class has a key role in Lucene. So, it needs to be properly refactored, now it is a collection of things.
+",0,0,0,0,0,0,1
+complex-class,org.apache.lucene.index.TestIndexWriterExceptions,2,"
+tests are important. So, it needs to be properly refactored, now it is a collection of things.
+",0,0,0,0,0,0,1
+complex-class,org.apache.lucene.search.highlight.HighlighterTest,2,"
+this is another example of wrongly designed test that is too complex to be modified.
+",0,1,0,0,1,0,1
+complex-class,org.apache.lucene.util.LuceneTestCase,2,"
+this is another example of wrongly designed test that is too complex to be modified.
+",0,1,0,0,1,0,1
+complex-class,org.apache.lucene.util.TestUtil,2,"
+this is another example of wrongly designed test that is too complex to be modified.
+",0,1,0,0,1,0,1
+complex-class,org.apache.mahout.math.Sorting,2,"
+this is long and hard to understand, there may be some refactoring ongoing. 
+",0,0,0,1,1,0,0
+complex-class,org.apache.solr.BaseDistributedSearchTestCase,2,"
+too many conditions changed over time and some dead code: these made the class complex and hard to maintain.
+",0,1,0,0,1,0,0
+complex-class,org.apache.solr.client.solrj.SolrClient,2,"
+as this is a core class, it should be less complex than it is currently.
+",0,0,0,0,1,0,0
+complex-class,org.apache.solr.client.solrj.SolrQuery,2,"
+as this is a core class, it should be less complex than it is currently.
+",0,0,0,0,1,0,0
+complex-class,org.apache.solr.cloud.AbstractFullDistribZkTestBase,2,"
+this is another example of wrongly designed test that is too complex to be modified.
+",0,1,0,0,1,0,1
+complex-class,org.apache.solr.cloud.OverseerCollectionMessageHandler,2,"
+this class was modified recently, that's why it became complex. We plan to do something. 
+",0,1,0,0,1,0,0
+complex-class,org.apache.solr.cloud.ZkController,2,"
+the class does too many things and would require some action. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.solr.common.util.JavaBinCodec,2,"
+yes, we are aware of the poor design and complexity of this class. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.solr.core.SolrCore,2,"
+as this is a core class, it should be less complex than it is currently.
+",0,0,0,0,1,0,0
+complex-class,org.apache.solr.schema.FieldType,2,"
+this class should be carefully refactored in terms of complexity.
+",0,0,0,0,1,0,0
+complex-class,org.apache.solr.schema.IndexSchema,2,"
+this is hardly understandable, it should be refactored. 
+",0,0,0,0,1,0,0
+complex-class,org.apache.solr.search.SolrIndexSearcher,2,"
+as this is a core class, it should be less complex than it is currently.
+",0,0,0,0,1,0,0
+complex-class,org.apache.solr.search.ValueSourceParser,2,"
+as this is a core class, it should be less complex than it is currently.
+",0,0,0,0,1,0,0
+complex-class,org.apache.solr.SolrTestCaseJ4,2,"
+the test is overly complicated and not easy to understand.
+",0,0,0,0,1,0,1
+complex-class,org.eclipse.cdt.core.CCorePlugin,1,"
+It is complex to read, but not that hard to modify.
+",0,1,0,0,1,0,0
+complex-class,org.eclipse.cdt.core.dom.lrparser.action.BuildASTParserAction,1,"
+a bit too complex.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.core.dom.lrparser.action.cpp.CPPBuildASTParserAction,1,"
+this should be refactored at some point to reduce its complexity.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.core.internal.errorparsers.tests.ErrorParserFileMatchingTest,1,"
+as a test, it needs to find defects and not necessarily needs to be readable. 
+",0,0,0,0,1,0,1
+complex-class,org.eclipse.cdt.core.model.CoreModel,1,"
+this is another class that may be simplified, even tough it is intrinsically complicated.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.core.parser.tests.ast2.AST2CPPSpecTest,1,"
+the class is a test, it is pretty complex but works.
+",0,0,0,0,1,0,1
+complex-class,org.eclipse.cdt.core.parser.tests.ast2.AST2CPPTests,1,"
+the class is a test, it is pretty complex but works.
+",0,0,0,0,1,0,1
+complex-class,org.eclipse.cdt.core.parser.tests.ast2.AST2TemplateTests,1,"
+the class is a test, it is pretty complex but works.
+",0,0,0,0,1,0,1
+complex-class,org.eclipse.cdt.core.parser.tests.ast2.AST2Tests,1,"
+the class is a test, it is pretty complex but works.
+",0,0,0,0,1,0,1
+complex-class,org.eclipse.cdt.core.parser.tests.ast2.CompleteParser2Tests,1,"
+the class is a test, it is pretty complex but works.
+",0,0,0,0,1,0,1
+complex-class,org.eclipse.cdt.core.parser.tests.ast2.QuickParser2Tests,1,"
+while the class can be hard to understand, I would not refactor it.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.core.parser.tests.scanner.PortedScannerTests,1,"
+it scans elements to check the correct inner-working of the Scanner: it is a bit too complex, but we can live with that.
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.core.settings.model.util.CDataUtil,1,"
+""this is utility class, I would put its refactoring in the """"non-urgent"""" list""
+",0,0,0,0,0,1,0
+complex-class,org.eclipse.cdt.core.settings.model.util.PathEntryTranslator,1,"
+the path translator can be simplified, but the class doe not change so much so there is no really need to refactor.
+",0,1,0,0,1,1,0
+complex-class,org.eclipse.cdt.debug.core.CDebugUtils,1,"
+I see this can be considered too complex.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.core.CDebugUtils,1,"
+This is a utility class, could be made less large.
+",0,0,0,1,0,1,0
+complex-class,org.eclipse.cdt.debug.core.CDIDebugModel,1,"
+the class is inheritely complex and may be refactored. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.core.CDIDebugModel,1,"
+the model could be simplified in some points.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.core.executables.ExecutablesManager,1,"
+poorly readable andquite  complex.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.gdbjtag.ui.GDBJtagStartupTab,1,"
+I see that the class has some complexity.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.internal.core.CBreakpointManager,1,"
+the class is clearly complex and makes a lot of things. However, it changes not that often.
+",0,1,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.internal.core.CBreakpointManager,1,"
+there are methods that can be simplified.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.internal.core.model.CDebugTarget,1,"
+some methods could be residegned to avoid complexity.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.internal.core.model.CDebugTarget,1,"
+the class has been modified in the past and this made it complex… but now it is stable enough.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.internal.core.model.CStackFrame,1,"
+it is hard to understand if you dont know it. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.internal.core.model.CStackFrame,1,"
+this is complex code that is even hard to understand.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.internal.core.model.CThread,1,"
+Cthread has always been a bit complicated, but it is in the codebase since long time now and there is no urgent need to refactor. 
+",0,0,0,1,1,1,0
+complex-class,org.eclipse.cdt.debug.internal.core.model.CThread,1,"
+threads are naturally more difficult to manage and understand.
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.debug.internal.core.model.CValue,1,"
+the class is a bit more complex than the needed.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.internal.ui.breakpoints.CBreakpointPropertyPage,1,"
+there are too many properties checked inside.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.internal.ui.CDebugModelPresentation,1,"
+the presentation seems to be pretty complex, esp. for newcomers.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.internal.ui.dialogfields.ListDialogField,1,"
+it is hard to read, perhaps some refactoring would be needed.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.mi.core.cdi.BreakpointManager,1,"
+too many conditions checked.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.mi.core.cdi.model.Target,1,"
+I see this class having a number of problems, including the high complexity of some methods.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.mi.core.cdi.model.Target,1,"
+the class might be simplified, but it is not that urgent at the moment
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.mi.core.cdi.VariableManager,1,"
+this manager is poorly understandable.
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.debug.mi.core.command.CommandFactory,1,"
+the factory classes are all hard to understand because they loop over multiple elements and this may create confusion to those who have not developed actively them. Nevertheless, they would not require urgetn changes
+",0,1,0,0,1,1,0
+complex-class,org.eclipse.cdt.debug.mi.core.MIPlugin,1,"
+complex and poorly readable. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.mi.core.MISession,1,"
+I agree on the fact that this class could be made more readable by adding some documentaion
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.mi.internal.ui.dialogfields.ListDialogField,1,"
+the class could be improved in terms of complexity.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.ui.breakpoints.AbstractToggleBreakpointAdapter,1,"
+the class may be refactored for comprehensibility, still I dont believe it's so serious.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.ui.memory.floatingpoint.Rendering,1,"
+the class has a number of loops that may be simplified, even tough there is no urgency for that.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser,1,"
+the class keeps track of the memory spent by the parser, it is old enough not to be touched frequently. 
+",0,1,0,0,0,1,0
+complex-class,org.eclipse.cdt.debug.ui.memory.traditional.Rendering,1,"
+the class has a number of loops that may be simplified, even tough there is no urgency for that.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyBackendDsf,0,"
+there may be the case of reducing the comlpexity of this class.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyPart,1,"
+the class is rarely touched.
+",0,1,0,0,0,0,0
+complex-class,org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyPart,0,"
+DisassemblyPart requires some refactoring because it has too many loops and if statements, yet it is now in a stable fashion.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.debug.internal.ui.disassembly.model.DisassemblyDocument,1,"
+methods of this class could be simplified, I see.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.debug.internal.ui.disassembly.model.DisassemblyDocument,0,"
+same as above.
+",0,1,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.debug.internal.ui.disassembly.text.REDTextStore,0,"
+rarely modified, even tough some methods should be improved. 
+",0,1,0,0,0,0,0
+complex-class,org.eclipse.cdt.dsf.debug.service.BreakpointsMediator,1,"
+the class has some issue in terms of complexity. It may be improved.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.debug.service.BreakpointsMediator2,1,"
+does too many things in the wrong manner… 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter,0,"
+the complexity is still reasonably low for my standards.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.debug.ui.viewmodel.launch.StackFramesVMNode,0,"
+the class has some methods that look complex, but it is not really a problem.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.debug.ui.viewmodel.register.RegisterVMNode,0,"
+while I see some methods going toward an excessive complexity, this is still ok.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.gdb.internal.ui.tracepoints.TraceControlView,0,"
+there are methods that might require some refactoring for understandability.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.gdb.multicorevisualizer.internal.ui.view.MulticoreVisualizer,0,"
+i see methods that appear too complex to understand.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.gdb.multicorevisualizer.internal.ui.view.MulticoreVisualizerCanvas,0,"
+complex methods.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.gdb.service.command.GDBControl,0,"
+I wouldn't change this class.
+",0,1,0,0,0,0,0
+complex-class,org.eclipse.cdt.dsf.gdb.service.GDBProcesses_7_0,0,"
+the processes work pretty well but they may seem poorly designed - they are complex to work on for newcomers. We have some changes to this class and refactor now would be a bit complicated.
+",0,1,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.gdb.service.GDBRegisters,0,"
+I can see some methods are growing, but for now they look fine.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS,0,"
+the class is a bit too complex wrt how I usually proceed, but I wouldn't say this is a big issue.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl,0,"
+don't see the need of simplyfing the class. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.mi.service.command.CommandFactory,0,"
+factories are naturally harder to design and some action aimed at reducing their complexity migh be done.
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.dsf.mi.service.MIBreakpointsManager,0,"
+the class contains too many loops and this has the effect of making it hard to read. It is possible to improve its design tough
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.mi.service.MIBreakpointsSynchronizer,1,"
+don't believe the complexity is that high after all.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.mi.service.MIBreakpointsSynchronizer,0,"
+there might be the chance of reducing the complexity given by the many loops of the class at some point. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.mi.service.MIMemory,0,"
+I see some complexity evolving, but i'm ok with that. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.mi.service.MIRunControl,0,"
+it may be a bit complex, but I am the only one working here.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.dsf.mi.service.MIStack,0,"
+it has some methods that could be split, but this is not really an issue.
+",0,0,0,1,0,0,0
+complex-class,org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider,0,"
+it doesn't change, not requires refactoring.
+",0,1,0,0,0,0,0
+complex-class,org.eclipse.cdt.examples.pdavm.PDAVirtualMachine,0,"
+I am not the main contributor of this, but it seems there is a method that is not understanble and way too complex.
+",0,1,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.CharOperation,1,"
+It is complex to read, but not that hard to modify.
+",0,1,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.lrparser.c99.C99ExpressionParser,1,"
+the class seems to be too complex.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.lrparser.c99.C99NoCastExpressionParser,1,"
+the documentation is absent and some parts are hard to understand.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.lrparser.c99.C99Parser,1,"
+I see some methods using too many loops.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.lrparser.c99.C99SizeofExpressionParser,1,"
+the class is clearly too complex.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.lrparser.cpp.CPPExpressionParser,1,"
+the complexity of the class seems to be high.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.lrparser.cpp.CPPNoFunctionDeclaratorParser,2,"
+the complexity is very high here.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.lrparser.cpp.CPPParser,2,"
+the class can be barely understood by newcomers.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.lrparser.cpp.CPPSizeofExpressionParser,2,"
+some actions should be taken to reduce the complexity of this class.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.lrparser.gcc.GCCParser,2,"
+the parser is highly complex.
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser,1,"
+this is an abstract class, we have done some refactorings to the children.
+",1,0,0,0,0,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.parser.c.GNUCSourceParser,1,"
+this is complex code
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.parser.cpp.CPPNodeFactory,1,"
+the class is hard to understand and should be better documented. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser,1,"
+It doesn't change too much, the refactoring could be worth but not urgent.
+",0,1,0,0,0,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPSemantics,1,"
+this class is complex by definition.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPTemplates,1,"
+this class is complex by definition.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPVisitor,1,"
+this class is complex by definition.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.index.CIndex,1,"
+too complex, some more documentation should be added.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.model.CModelManager,1,"
+the manager treats C elements but it is old enouggh to be legacy.
+",0,0,0,0,0,1,0
+complex-class,org.eclipse.cdt.internal.core.model.TranslationUnit,1,"
+too complex, the original developers are not anymore contributing so it is hard to get a way to refactor it.
+",0,1,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor,1,"
+it preprocesses things, it is normal that it is a bit more complex.
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask,1,"
+it is too much complicated, but I can live with that.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.pdom.dom.PDOMFile,1,"
+the DOM formulation is composite and makes the understanding hard. This is known issue.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.pdom.dom.PDOMLinkage,1,"
+the DOM formulation is composite and makes the understanding hard. This is known issue.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.pdom.PDOM,1,"
+documentation could be better given that it is hard to understand.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.pdom.PDOMManager,1,"
+the class could be better organized for sure, it is a bit too complex.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.core.settings.model.CConfigurationDescription,1,"
+it is not critical, this is a class that stays in the system since long time.
+",0,0,0,1,0,0,0
+complex-class,org.eclipse.cdt.internal.core.settings.model.CConfigurationSpecSettings,1,"
+it is not critical, this is a class that stays in the system since long time.
+",0,0,0,1,0,0,0
+complex-class,org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager,1,"
+it is not critical, this is a class that stays in the system since long time.
+",0,0,0,1,0,0,0
+complex-class,org.eclipse.cdt.internal.corext.refactoring.code.flow.FlowAnalyzer,1,"
+it has too many loops, but is normal. It may be refactored, if really needed.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.formatter.CodeFormatterVisitor,1,"
+It is complex to read, but not that hard to modify.
+",0,1,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.formatter.Scribe,1,"
+it is a test, and seems to work decently well.
+",0,0,0,0,0,0,1
+complex-class,org.eclipse.cdt.internal.index.tests.IndexBugsTests,1,"
+the class makes too many things, should be re-organized to increase readability.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.editor.CEditor,1,"
+it checks too many items, can be refactored but I would not say its' a priority.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.ImageCombo,1,"
+it checks too many items, can be refactored but I would not say its' a priority.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.text.asm.AsmPartitionScanner,1,"
+scanners are somehow too complex, but refactoring them would require a lot of time. 
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.internal.ui.text.CAutoIndentStrategy,1,"
+the auto-indent function seems too complicated… 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.text.CHeuristicScanner,1,"
+this  has the reason to be complex, even tough some simplifications may be done.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.text.CIndenter,1,"
+this is naturally complex, I would not know how to refactor it. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.text.CIndenter,1,"
+too many methods and parameters.
+",0,0,0,1,0,0,0
+complex-class,org.eclipse.cdt.internal.ui.text.contentassist.DOMCompletionProposalComputer,1,"
+this is a class that has to do with the DOM parsing and, as such, is way complex. 
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.internal.ui.text.FastCPartitionScanner,1,"
+the performance of this class is the reason not to refactor, despite it could be the case to reduce its complexity.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.text.folding.DefaultCFoldingStructureProvider,1,"
+mmm, the structure provider could be simplified. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.text.spelling.engine.DefaultPhoneticHashProvider,1,"
+has low readability, it should be fixed. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.typehierarchy.THViewPart,1,"
+we had discussions on refactoring this class because it was becoming too complex, I think we should rediscuss about it at 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.viewsupport.CElementLabelComposer,1,"
+support views in eclipse requires some code, that's why this may have become complex.
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.internal.ui.wizards.classwizard.NewClassCodeGenerator,1,"
+clearly, this class is too complex but this depends on the functionalities it is responsible of. 
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.internal.ui.wizards.dialogfields.ListDialogField,1,"
+yess, this is a bit too complext, it may require some refactoring
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.wizards.dialogfields.TreeListDialogField,1,"
+not sure of how to refactor, but this is really unreadable.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.internal.ui.wizards.filewizard.AbstractFileCreationWizardPage,0,"
+this class has a lot of methods that could be simplified. But after all I am ok with that.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.launch.AbstractCLaunchDelegate,1,"
+too many methods.
+",0,0,0,1,0,0,0
+complex-class,org.eclipse.cdt.launch.ui.CAbstractMainTab,1,"
+perhaps some parts of the code may be simplified. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.managedbuilder.core.ITool,2,"
+too complex, should be improved. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.managedbuilder.core.ManagedBuildManager,2,"
+the manager does too many things and is too complex.
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription,2,"
+too many if statements and loops, they make the class untouchable
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.managedbuilder.internal.core.Builder,2,"
+there is again a case of too complex class.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.managedbuilder.internal.core.Configuration,1,"
+the class is rarely modified, this is not in our list of things to do.
+",0,1,0,0,0,0,0
+complex-class,org.eclipse.cdt.managedbuilder.internal.core.FolderInfo,1,"
+it just provides some basic information to the model, no need to be refactored.
+",0,0,0,0,0,1,0
+complex-class,org.eclipse.cdt.managedbuilder.internal.core.InputType,1,"
+not clear if this class  really requires these too many functionalities.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.managedbuilder.internal.core.ManagedBuildInfo,1,"
+the class could be surely improved, as it is now a bit hard to understand.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.managedbuilder.internal.core.MultiConfiguration,1,"
+it checks multiple things and may be simplified.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.managedbuilder.internal.core.Option,1,"
+it is not a priority, but it may be reduced in terms of size.
+",0,0,0,1,0,0,0
+complex-class,org.eclipse.cdt.managedbuilder.internal.core.OptionReference,1,"
+it is not a priority, but it may be reduced in terms of size.
+",0,0,0,1,0,0,0
+complex-class,org.eclipse.cdt.managedbuilder.llvm.util.LlvmToolOptionPathUtil,1,"
+unclear use of parameters and loops.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator,1,"
+the class is complex by nature… No idea of how to deal with it.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.tests.dsf.gdb.framework.SyncUtil,1,"
+complexity-wise, it is not that simple.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.tests.dsf.gdb.framework.SyncUtil,0,"
+a utility class that does several things, possibly to refactor. 
+",0,0,0,0,0,1,0
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.GDBPatternMatchingExpressionsTest,0,"
+it is naturally complex because of the funcions it implements. 
+",0,0,0,0,1,1,0
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.LaunchConfigurationAndRestartTest,0,"
+the class does a number of things and this makes it quite complex. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.MIBreakpointsTest,1,"
+class a bit hard to understand.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.MIBreakpointsTest,0,"
+the test is complicated because the class it tests is complex as well… it is hard to refactor if the class is not refactored first.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.MICatchpointsTest,1,"
+it's clear how this class is complex, but this is something required here.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.MICatchpointsTest,0,"
+the test tests a class that requires more loops
+",0,0,0,0,1,0,1
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.MIExpressionsTest,1,"
+poor documentation, poor readability.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.MIExpressionsTest,0,"
+the way it tests MIExpressions can be improved, but not in the short term
+",0,0,0,0,0,0,1
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.MIMemoryTest,0,"
+I guess you're referring to the intrinsic complexity of the class.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.MIRegistersTest,1,"
+it is actually too complex given what it should do. But it works… 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.tests_7_0.GDBMultiNonStopRunControlTest_7_0,1,"
+The test is quite complex, yet I don't see the need for refactoring it.
+",0,0,0,0,1,0,1
+complex-class,org.eclipse.cdt.tests.dsf.gdb.tests.tests_7_0.GDBMultiNonStopRunControlTest_7_0,1,"
+this is a class which is hard to comprehend. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.tests.dsf.ViewerUpdatesListener,0,"
+i dont see excessive complexity.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.tests.dsf.vm.FormattedValueTests,0,"
+the readability may be improved, yet I think the code is ok.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.actions.CustomFiltersActionGroup,0,"
+it is not often changed, so no need to refactor.
+",0,1,0,0,0,0,0
+complex-class,org.eclipse.cdt.ui.CUIPlugin,0,"
+the class may be made simpler, but it really not the priority now.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.dialogs.IndexerBlock,0,"
+it's a bit too complex, but it doesn't change too much.
+",0,1,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.dialogs.RegexErrorParserOptionPage,0,"
+could be simplified.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.newui.AbstractLangsListTab,1,"
+there are too many methods implemented, it'll require some changes in the future.
+",0,1,0,0,0,0,0
+complex-class,org.eclipse.cdt.ui.newui.AbstractPage,1,"
+as long as the children won't change, this class will not change as well. 
+",1,1,0,1,0,0,0
+complex-class,org.eclipse.cdt.ui.newui.AbstractPage,1,"
+this is an abstract class, we have done some refactorings to the children.
+",1,0,0,0,0,0,0
+complex-class,org.eclipse.cdt.ui.newui.StructureTreeTab,1,"
+this is slightly complex, I see.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.tests.DOMAST.DOMAST,0,"
+all doms are complex, but it doesn't imply a refactoring.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.tests.DOMAST.DOMASTNodeLeaf,0,"
+this class has a number of complex statements, but this is clearly the case given its role.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.tests.DOMAST.FindIASTNameDialog,0,"
+no need to simplify
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.tests.refactoring.rename.RenameRegressionTests,0,"
+its just a test.
+",0,0,0,0,0,0,1
+complex-class,org.eclipse.cdt.ui.tests.refactoring.togglefunction.ToggleRefactoringTest,1,"
+the class may be made simpler, I agree. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.tests.text.AsmPartitionerTest,0,"
+the class is rarely modified, hence not requiring special attentions.
+",0,1,0,0,0,0,0
+complex-class,org.eclipse.cdt.ui.tests.text.CodeFormatterTest,1,"
+the problem exists complexity-wise, but there are classes requiring more.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.tests.text.CodeFormatterTest,1,"
+to format elements, this class makes a number of loops. It might have been done differently, but still… 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.tests.text.contentassist2.CompletionTests,1,"
+the class is basically old enogh and stable, I see it may be problematic because of its poor understandability.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.tests.text.contentassist2.CompletionTests,1,"
+the class is hard to understand, but not really at the point to simplify it. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.tests.text.CPartitionerTest,1,"
+the class is clearly poorly readable, this may impact our attractiveness. 
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.tests.text.selection.CPPSelectionTestsIndexer,1,"
+this is prestty complex, it would require some refactoring.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.tests.text.selection.CPPSelectionTestsNoIndexer,1,"
+already since the beginning, the class looked complex.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.text.CSourceViewerConfiguration,1,"
+too many methods.
+",0,0,0,1,0,0,0
+complex-class,org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage,1,"
+this has been problematic because of the many complex methods it contains.
+",0,0,0,0,1,0,0
+complex-class,org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage,1,"
+this is a class that was created to replace the old way of doing a wizard page. Its still a bit too complex.
+",0,0,0,0,1,1,0
+spaghetti-code,org.apache.cassandra.config.DatabaseDescriptor,1,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.cql3.statements.SelectStatementTest,1,"
+the class is complex because it tests a class that is complex.
+",0,0,0,0,1,0,1
+spaghetti-code,org.apache.cassandra.db.ColumnFamilyStore,1,"
+methods are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.db.ColumnFamilyStoreTest,1,"
+it is hard to understand.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.cassandra.gms.Gossiper,1,"
+the class has a number of long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.io.sstable.SSTableReader,1,"
+too many methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.io.sstable.SSTableRewriterTest,1,"
+the class is overly long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.metrics.ColumnFamilyMetrics,1,"
+methods are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.service.StorageProxy,1,"
+the complexity of the methods is too high.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.cassandra.service.StorageService,1,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.thrift.Cassandra,1,"
+long and complex code.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.cassandra.thrift.CassandraServer,1,"
+too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.thrift.CfDef,1,"
+complex methods with unclear functions.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.cassandra.thrift.ColumnDef,1,"
+too many methods are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.thrift.ColumnOrSuperColumn,1,"
+certain methods look complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.cassandra.thrift.CqlMetadata,1,"
+code complexity.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.cassandra.thrift.CqlPreparedResult,1,"
+some methods are complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.cassandra.thrift.CqlResult,1,"
+High LOC.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.thrift.KsDef,1,"
+long methods are included in the class.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.thrift.MultiSliceRequest,1,"
+the class has several complex methods.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.cassandra.tools.NodeProbe,1,"
+methods are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.cassandra.utils.MerkleTree,1,"
+complex code.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.api.security.user.UserManagerSearchTest,1,"
+too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.commons.AbstractNode,1,"
+the class has too many complex methods.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.commons.cnd.CompactNodeTypeDefReader,1,"
+to be honest, several methods are too long and could dialog with other classes in a better way.
+",1,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.commons.cnd.CompactNodeTypeDefReader,2,"
+the complexity of the code is high.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.commons.JcrUtils,1,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.commons.JcrUtils,2,"
+methods are simply too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.commons.query.GQL,1,"
+several methods - which were well designed at the beginning - of the class could be refactored for improving their comprehension.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.commons.query.GQL,2,"
+the methods would need some refactoring to be simplified.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.commons.query.sql2.Parser,1,"
+long and complex code makes hard to understand the class.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.commons.query.sql2.Parser,2,"
+the class makes use of complex methods.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.CachingHierarchyManager,1,"
+too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.CachingHierarchyManager,2,"
+has a number of overly long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.cluster.ClusterNode,1,"
+dozens of methods are long and not properly documented. 
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.cluster.ClusterNode,2,"
+some methods are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.config.RepositoryConfig,1,"
+the class has several long/complex methods.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.config.RepositoryConfig,2,"
+unclear role of certain methods.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.config.RepositoryConfigurationParser,2,"
+the methods implemented here are too long and complex.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.data.db.DbDataStore,2,"
+complex methods. 
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.fs.db.DatabaseFileSystem,1,"
+the class lacks of clarity and there are several complex functions.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.fs.db.DatabaseFileSystem,2,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.ItemManager,1,"
+long methods everywhere.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.ItemManager,2,"
+there seem to me that some methods are overly complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.journal.DatabaseJournal,0,"
+this is pretty complex to say and the methods are unclearly defined.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.journal.DatabaseJournal,2,"
+it is clear that the class has some design issue.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.lock.LockManagerImpl,0,"
+too many long methods, this is something we are aware of. 
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.lock.LockManagerImpl,2,"
+methods that do not call each other, otehr than being too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.NodeImpl,1,"
+this class looks like a container of methods.
+",0,0,1,0,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.nodetype.EffectiveNodeType,2,"
+there are methods that should be split.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.nodetype.NodeTypeRegistry,0,"
+long and complex code.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.nodetype.NodeTypeRegistry,2,"
+some of the methods are long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.observation.EventState,0,"
+it is too complex due to its size and not established goal.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.observation.EventState,2,"
+long, complex methods.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.persistence.bundle.AbstractBundlePersistenceManager,0,"
+there are many methods that do not have a clear function.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.persistence.bundle.AbstractBundlePersistenceManager,2,"
+the methods of this class do not call each other.
+",0,0,1,0,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.persistence.db.DatabasePersistenceManager,0,"
+too many methods which are long and complex.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.persistence.db.DatabasePersistenceManager,2,"
+many methods are unnecessarily long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.persistence.pool.BundleDbPersistenceManager,0,"
+documentation is lacking, many methods are simply too long to be understood easily.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.persistence.pool.BundleDbPersistenceManager,2,"
+complex methods. 
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.persistence.xml.XMLPersistenceManager,0,"
+the persistence is done correctly, but the way it is done is not the best possible. 
+",0,0,0,0,0,1,0
+spaghetti-code,org.apache.jackrabbit.core.PropertyImpl,1,"
+it is unclear what is the goal of this class.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.PropertyImpl,1,"
+several long methods reduce the understandability.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.query.lucene.ConsistencyCheck,2,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.query.lucene.IndexingConfigurationImpl,0,"
+it collects a number of long methods.
+",0,0,1,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.query.lucene.IndexingConfigurationImpl,2,"
+too complex class.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.query.lucene.LuceneQueryBuilder,1,"
+long and complex code here.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.query.lucene.LuceneQueryBuilder,2,"
+unclear responsability of the class.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.query.lucene.MoreLikeThis,1,"
+the goal its unclear and the class lacks of documentation for the (long) methods it declares.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.query.lucene.MoreLikeThis,2,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.query.lucene.MultiIndex,1,"
+the many methods of the class reduce its understandability
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.query.lucene.MultiIndex,2,"
+Presence of complex methods.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.query.lucene.NodeIndexer,1,"
+This is a class containing many methods that are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.query.lucene.SearchIndex,2,"
+the class is too complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.RepositoryImpl,1,"
+many methods are long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.RepositoryImpl,1,"
+it is hard to maintain because every method is long and complex.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.authentication.AbstractLoginModule,1,"
+it could have been designed better, especially some methods appear to be too complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.authentication.AbstractLoginModule,2,"
+many methods should be simplified.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.authorization.AbstractWriteTest,1,"
+working on this code becomes difficult.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.authorization.AbstractWriteTest,2,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.authorization.PrivilegeRegistry,1,"
+the long methods of the class limit its maintainability.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.authorization.PrivilegeRegistry,2,"
+the methods are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.user.GroupImpl,1,"
+the correct functioning of the class is threatened by the many methods without a clear structure.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.user.GroupImpl,2,"
+complex code, some methods should be divided.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.user.UserImporterTest,2,"
+it is hard to understand because the methods are long and complex.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.user.UserManagerImpl,1,"
+too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.user.UserManagerImpl,2,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.security.user.UserManagerImplTest,1,"
+the class uses a kind of functional approach for delivering things.
+",0,0,1,0,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.SessionImpl,1,"
+long methods hide their functionalities.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.state.NodeState,1,"
+long code.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.state.NodeState,2,"
+the class has long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.state.NodeStateMergerTest,2,"
+I see several long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.state.SessionItemStateManager,1,"
+too complex methods are included in the class.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.state.SessionItemStateManager,2,"
+too complex methods.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.state.SharedItemStateManager,1,"
+the code is actually hard to understand if you don't touch it regularly.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.value.InternalValue,1,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.version.NodeStateEx,1,"
+the top issue with this class is related to the presence of many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.version.NodeStateEx,2,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.WorkspaceImpl,1,"
+long methods are present in the class.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.core.XATest,1,"
+there are too many complex methods.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.core.XATest,1,"
+limited understandability.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.j2ee.RepositoryStartupServlet,1,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.j2ee.RepositoryStartupServlet,0,"
+parameters are poorly used and the methods look long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.jcr2spi.hierarchy.ChildNodeEntriesImpl,1,"
+long and complex methods threaten its understandability.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.jcr2spi.hierarchy.ChildNodeEntriesImpl,2,"
+too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.jcr2spi.hierarchy.NodeEntryImpl,2,"
+the class contains a number of complex functions.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.jcr2spi.lock.LockManagerImpl,0,"
+the class has a lot of long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.jcr2spi.lock.LockManagerImpl,2,"
+high complexity and LOC.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.jcr2spi.NodeImpl,1,"
+methods should be split and clarity improved.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.jcr2spi.nodetype.NodeTypeRegistryImpl,2,"
+the class has several long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.jcr2spi.SessionImpl,1,"
+many long and complex methods.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.jcr2spi.SessionImpl,2,"
+there are several methods of huge size.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.jcr2spi.WorkspaceManager,1,"
+the class is at the high risk to become a mess due to the long methods it contains.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.jcr2spi.WorkspaceManager,2,"
+the class is complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.rmi.client.ClientNode,1,"
+too many long methods have been developed in the class.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.rmi.client.ClientNode,2,"
+the comprehensibility of this class is threatened by these huge set of complex methods.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.rmi.server.ServerNode,1,"
+long code.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.server.io.DefaultHandler,1,"
+it handles things using a number of long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.server.io.DefaultHandler,2,"
+methods are too long and complex.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.server.remoting.davex.JcrRemotingServlet,1,"
+the communication that the class has with other classes might be improved. 
+",1,0,0,0,0,0,0
+spaghetti-code,org.apache.jackrabbit.server.remoting.davex.JcrRemotingServlet,2,"
+complex code.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.ItemInfoBuilder,0,"
+long methods risk to become a problem.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.ItemInfoBuilder,2,"
+methods are complex and seem to do too many things.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.logging.RepositoryServiceLogger,0,"
+several methods are too long and complex.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.logging.RepositoryServiceLogger,2,"
+complex code, complex methods.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.qom.QueryObjectModelFactoryImpl,0,"
+looking at the code, many methods may be improved with respect to their size.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.sql.JCRSQLParser,0,"
+some methods appear to be long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.sql.JCRSQLParser,0,"
+the LOC of several methods is too high.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.sql.JCRSQLParserTokenManager,0,"
+a large quantity of methods of this class have not clear responsibilities.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.sql.JCRSQLParserTokenManager,2,"
+long and complex code.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.sql.JCRSQLQueryBuilder,0,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.sql.JCRSQLQueryBuilder,2,"
+presence of a lot of complex methods.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.xpath.XPath,1,"
+the class is difficult to read, methods are not designed properly.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.xpath.XPath,0,"
+the scope of the class is not very well understandable.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.xpath.XPathQueryBuilder,1,"
+many methods without a clear goal. 
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.xpath.XPathQueryBuilder,0,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.spi.commons.query.xpath.XPathTokenManager,0,"
+the code is way too complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi.RepositoryService,2,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.spi2dav.DavPropertyTest,1,"
+too much code, with long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.spi2dav.DavPropertyTest,0,"
+long methods present here.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.spi2dav.RepositoryServiceImpl,1,"
+many methods should be made simpler.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi2dav.RepositoryServiceImpl,0,"
+the number of long methods is high.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.spi2jcr.RepositoryServiceImpl,1,"
+long methods threaten its understandability.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.spi2jcr.RepositoryServiceImpl,0,"
+class with several long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.standalone.cli.info.AbstractLsNodes,0,"
+the methods of this class are overly long and complex.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.test.AbstractJCRTest,1,"
+too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.test.AbstractJCRTest,2,"
+complex and huge methods.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.NodeReadMethodsTest,2,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.NodeTest,1,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.nodetype.NodeTypeUtil,2,"
+the code is too complex and hard to understand.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.SerializationTest,1,"
+easy to say, methods are too long and complex.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.ShareableNodeTest,1,"
+the complexity of many methods should be reduced.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.ShareableNodeTest,2,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.util.Text,1,"
+many methods are long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.util.Text,2,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.version.RestoreTest,1,"
+many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.version.RestoreTest,2,"
+the class is too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.version.simple.RestoreTest,2,"
+the goal of the class is unclear.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.version.VersionHistoryTest,1,"
+complex code, which is likely to be hard to understand for other developers.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.version.VersionHistoryTest,2,"
+it may contain some complex method.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.version.VersionTest,1,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.test.api.version.VersionTest,2,"
+the methods of the class look too complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.util.Text,1,"
+the class risks to be prone to bugs, given that many methods are long and badly designed.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.value.ValueHelper,1,"
+there is no documentation for the many long methods of the class.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.value.ValueHelper,2,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.webdav.header.IfHeader,1,"
+code may be improved, esp. the methods that are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.webdav.header.IfHeader,0,"
+the methods are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.webdav.jcr.DefaultItemCollection,1,"
+long code, hard to maintain.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.webdav.server.AbstractWebdavServlet,1,"
+the code contains long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.webdav.simple.DavResourceImpl,1,"
+long methods, lack of parameters, likely to become buggy. 
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.webdav.simple.DavResourceImpl,2,"
+methods are long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.jackrabbit.webdav.WebdavRequestImpl,1,"
+the class has complex code
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.webdav.WebdavRequestImpl,0,"
+too complex class.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.jackrabbit.webdav.xml.DomUtil,0,"
+the class seems to be a mere container of methods.
+",0,0,1,0,0,0,0
+spaghetti-code,org.apache.lucene.analysis.charfilter.HTMLStripCharFilter,0,"
+the code is too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.lucene.analysis.core.TestRandomChains,0,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.lucene.analysis.hunspell.Dictionary,0,"
+the class contains several unrelated methods.
+",0,0,1,0,0,0,0
+spaghetti-code,org.apache.lucene.analysis.ja.util.ToStringUtil,0,"
+the method implements a set of operations without a clearly defined common goal.
+",0,0,0,0,0,1,0
+spaghetti-code,org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilter,0,"
+it is not really possible to understand many of the large methods of this class.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.lucene.analysis.standard.UAX29URLEmailTokenizerImpl,0,"
+long and complex methods.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.lucene.analysis.standard.WordBreakTestUnicode_6_3_0,0,"
+the understandability of the class is low.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.lucene.analysis.synonym.TestSynonymMapFilter,0,"
+externals may have difficulties in dealing with the complexity of certain methods.
+",1,0,0,0,1,0,0
+spaghetti-code,org.apache.lucene.analysis.wikipedia.WikipediaTokenizerImpl,0,"
+the tokenizer should be improved with respect to its size and the methods it contains.
+",0,0,0,1,0,1,0
+spaghetti-code,org.apache.lucene.codecs.lucene50.Lucene50PostingsReader,0,"
+many methods are complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.lucene.index.CheckIndex,0,"
+documentation is missing, the code is too complex. 
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.lucene.index.ConcurrentMergeScheduler,0,"
+long methods that could be better designed.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.lucene.index.IndexWriter,0,"
+a lot of long methods, this is the problem with this class.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.lucene.index.SegmentInfos,0,"
+methods are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.lucene.index.TestAddIndexes,0,"
+the class contains a number of long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.lucene.index.TestBackwardsCompatibility,0,"
+poor use of parameters, too long code.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.lucene.index.TestBinaryDocValuesUpdates,1,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.lucene.index.TestDemoParallelLeafReader,1,"
+there are several methods that do not have a clear goal.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.lucene.index.TestDirectoryReader,1,"
+many methods may be split and made simpler.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.lucene.index.TestDocValuesIndexing,1,"
+while the class does what it does, it implements a number of methods that may be split.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.lucene.index.TestIndexWriter,1,"
+too many long methods. 
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.lucene.index.TestIndexWriterExceptions,0,"
+too many complex methods.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.lucene.index.TestNumericDocValuesUpdates,0,"
+the code may be too complex for other developers.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.lucene.index.TestTermsEnum,0,"
+many methods, too long and complex. 
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler,1,"
+long code.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler,1,"
+LOC too high.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer,1,"
+the code is pretty complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POCast,1,"
+long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.backend.hadoop.executionengine.tez.plan.TezCompiler,1,"
+too many long methods used here.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.backend.hadoop.hbase.HBaseStorage,1,"
+the code is long and complex.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.pig.data.DataType,1,"
+a number of long methods hide its understandability.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.pig.data.SchemaTuple,1,"
+the code is complex to read because of the many overly long methods.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.pig.impl.io.FileLocalizer,1,"
+too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.impl.logicalLayer.schema.Schema,1,"
+likely, the code has became hard to understand because of the many methods of the class.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.impl.PigContext,1,"
+the objective of the class is not very well defined, methods do not seem to contribute to a single funcitonality.
+",0,0,0,0,0,1,0
+spaghetti-code,org.apache.pig.impl.plan.OperatorPlan,1,"
+many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.Main,1,"
+many methods are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.newplan.logical.relational.LogicalSchema,1,"
+class is overly long and has a number of long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.newplan.logical.relational.LogToPhyTranslationVisitor,1,"
+too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.pen.AugmentBaseDataVisitor,1,"
+the code is complex and hard to understand.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.piggybank.evaluation.TestOver,1,"
+the class contains many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.piggybank.storage.IndexedStorage,1,"
+some methods are extremely long and complex. 
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.pig.PigServer,1,"
+the code is overly complex and many methods are too long.
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.pig.test.pigmix.datagen.DataGenerator,1,"
+the methods are often too long and badly designed.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.test.TestBuiltin,1,"
+hard to understand.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.test.TestDataBag,1,"
+too many methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.test.TestEvalPipeline,1,"
+long methods, poor use of parameters.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.test.TestEvalPipeline2,1,"
+the class cannot be easily understood.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.test.TestEvalPipelineLocal,1,"
+it has several long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.test.TestGrunt,1,"
+the methods are too complex to understand.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.test.TestMRCompiler,1,"
+too many methods and too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.test.TestMultiQueryCompiler,2,"
+A number of methods cannot be easily understood.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.test.TestNewPlanLogToPhyTranslationVisitor,2,"
+the class has several complex methods.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.test.TestNewPlanOperatorPlan,2,"
+the code is complex. 
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.test.TestNewPlanPushDownForeachFlatten,2,"
+too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.test.TestNewPlanPushUpFilter,2,"
+the class provides several methods whcih are long and perhaps too complex. 
+",0,0,0,1,1,0,0
+spaghetti-code,org.apache.pig.test.TestParamSubPreproc,1,"
+to many lines of code.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.test.TestPigRunner,1,"
+long code.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.test.TestPigServer,1,"
+the code is complex. 
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.test.TestPruneColumn,1,"
+the methods are too many.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.test.TestStore,1,"
+the code is extremely complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.test.TestTypeCheckingValidatorNewLP,1,"
+there are too many methods that are long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.pig.test.Util,1,"
+the goal of the class cannot be easily understood.
+",0,0,0,0,1,0,0
+spaghetti-code,org.apache.pig.test.utils.GenPhyOp,1,"
+too much code and too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.apache.tools.bzip2r.CBZip2OutputStream,1,"
+methods are too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.tartarus.snowball.ext.EnglishStemmer,0,"
+many long methods without documentation.
+",0,0,0,1,0,0,0
+spaghetti-code,org.tartarus.snowball.ext.FinnishStemmer,0,"
+certain methods are too complex.
+",0,0,0,0,1,0,0
+spaghetti-code,org.tartarus.snowball.ext.FrenchStemmer,0,"
+the code plus the many strings used make the code poorly understandable.
+",0,0,0,0,1,0,0
+spaghetti-code,org.tartarus.snowball.ext.HungarianStemmer,0,"
+it has too many long methods.
+",0,0,0,1,0,0,0
+spaghetti-code,org.tartarus.snowball.ext.ItalianStemmer,0,"
+the class is a kind of container of multiple functions.
+",0,0,1,0,0,0,0
+spaghetti-code,org.tartarus.snowball.ext.KpStemmer,0,"
+poorly understandable.
+",0,0,0,0,1,0,0
+spaghetti-code,org.tartarus.snowball.ext.LovinsStemmer,0,"
+the class is hard to understand because of the long methods that there are.
+",0,0,0,1,1,0,0
+spaghetti-code,org.tartarus.snowball.ext.PorterStemmer,0,"
+too much code.
+",0,0,0,1,0,0,0
+spaghetti-code,org.tartarus.snowball.ext.SpanishStemmer,0,"
+given its goal, it is not really a big issue, but several methods look too long.
+",0,0,0,1,0,0,0
+spaghetti-code,org.tartarus.snowball.ext.TurkishStemmer,0,"
+long methods.
+",0,0,0,1,0,0,0
+blob,org.apache.cassandra.config.CFMetaData,2,"
+There are utilitity methods that should be moved in another class
+",0,0,0,0,0,1,0
+blob,org.apache.cassandra.config.DatabaseDescriptor,2,"
+Too much LOC. The class is difficult to understand
+",0,0,0,1,1,0,0
+blob,org.apache.cassandra.cql3.statements.SelectStatement,2,"
+Too much LOC, few comments. Class difficult to understand
+",0,0,0,1,1,0,0
+blob,org.apache.cassandra.cql3.statements.SelectStatementTest,2,"
+Very complex class
+",0,0,0,0,1,0,0
+blob,org.apache.cassandra.db.ColumnFamilyStore,2,"
+Complex class
+",0,0,0,0,1,0,0
+blob,org.apache.cassandra.db.ColumnFamilyStoreTest,2,"
+Very complex class
+",0,0,0,0,1,0,0
+blob,org.apache.cassandra.db.compaction.CompactionManager,2,"
+Too much LOC, too confused
+",0,0,0,1,1,0,0
+blob,org.apache.cassandra.db.context.CounterContext,2,"
+Low cohesion
+",0,0,1,0,0,0,0
+blob,org.apache.cassandra.db.SystemKeyspace,2,"
+High number of LOC, high complexity
+",0,0,0,1,1,0,0
+blob,org.apache.cassandra.gms.Gossiper,2,"
+Too much LOC, too confused
+",0,0,0,1,1,0,0
+blob,org.apache.cassandra.hadoop.pig.CqlNativeStorage,2,"
+Too much LOC
+",0,0,0,1,0,0,0
+blob,org.apache.cassandra.io.sstable.SSTableReader,2,"
+It's a blob
+",0,0,0,1,0,0,0
+blob,org.apache.cassandra.io.sstable.SSTableRewriterTest,2,"
+Too much LOC, code confused
+",0,0,0,1,1,0,0
+blob,org.apache.cassandra.locator.TokenMetadata,2,"
+Too much LOC, too methods in the class
+",0,0,0,1,0,0,0
+blob,org.apache.cassandra.metrics.ColumnFamilyMetrics,2,"
+Too much LOC
+",0,0,0,1,0,0,0
+blob,org.apache.cassandra.net.MessagingService,2,"
+Class difficult to understand
+",0,0,0,0,1,0,0
+blob,org.apache.cassandra.service.StorageProxy,2,"
+Too much LOC
+",0,0,0,1,0,0,0
+blob,org.apache.cassandra.service.StorageService,2,"
+Low cohesion
+",0,0,1,0,0,0,0
+blob,org.apache.cassandra.thrift.CassandraServer,0,"
+Too parameters in the method declaration. But this is not our priority now
+",0,0,0,1,0,0,0
+blob,org.apache.cassandra.tools.NodeProbe,2,"
+Code should be rewrited in a way more comprehensible
+",0,0,0,0,1,0,0
+blob,org.apache.cassandra.utils.MerkleTree,2,"
+Low cohesion
+",0,0,1,0,0,0,0
+blob,org.apache.cxf.systest.type_test.AbstractTypeTestClient4,2,"
+Too much LOC
+",0,0,0,1,0,0,0
+blob,org.apache.cxf.systest.ws.coverage_checker.CryptoCoverageCheckerTest,2,"
+Too much LOC, low cohesion
+",0,0,1,1,0,0,0
+blob,org.apache.cxf.systest.ws.rm.SequenceTest,2,"
+It's a blob
+",0,0,0,1,0,0,0
+blob,org.apache.cxf.systest.ws.saml.SamlTokenTest,2,"
+Too much LOC
+",0,0,0,1,0,0,0
+blob,org.apache.cxf.systest.ws.x509.X509TokenTest,2,"
+Too much LOC, low cohesion
+",0,0,1,1,0,0,0
+blob,org.apache.cxf.tools.corba.processors.idl.IDLLexer,2,"
+Too many responsabilities
+",0,0,1,0,0,0,0
+blob,org.apache.cxf.tools.corba.processors.idl.IDLParser,2,"
+Too much LOC, code confused
+",0,0,0,1,1,0,0
+blob,org.apache.cxf.tools.corba.processors.wsdl.WSDLParameter,2,"
+Class difficult to understand
+",0,0,0,0,1,0,0
+blob,org.apache.cxf.tools.corba.processors.wsdl.WSDLToCorbaBinding,2,"
+It is a well-known problem, it is huge in size and has high coupling 
+",1,0,0,1,0,0,0
+blob,org.apache.cxf.tools.wsdlto.databinding.jaxb.JAXBDataBinding,2,"
+It is hard to understand 
+",0,0,0,0,1,0,0
+blob,org.apache.cxf.tools.wsdlto.jaxws.CodeGenBugTest,2,"
+Not maintainable, hard to udnerstad
+",0,0,0,0,1,0,0
+blob,org.apache.cxf.tools.wsdlto.WSDLToJavaContainer,2,"
+Too much LOC, the code cannot be understood
+",0,0,0,1,1,0,0
+blob,org.apache.jena.iri.impl.LexerHost,1,"
+This is too large, horrible to see.
+",0,0,0,1,0,0,0
+blob,org.apache.jena.iri.impl.LexerScheme,1,"
+The scheme is too confusing, its true.
+",0,0,0,0,1,0,0
+blob,org.apache.jena.iri.impl.LexerXHost,1,"
+The class is too large, it's true. 
+",0,0,0,1,0,0,0
+blob,org.apache.jena.iri.ViolationCodes,1,"
+The class is too large, it's true. 
+",0,0,0,1,0,0,0
+blob,org.apache.jena.jdbc.connections.AbstractJenaConnectionTests,1,"
+The connection should be managed better, but not seems to be too late.
+",1,0,0,0,0,0,0
+blob,org.apache.jena.jdbc.connections.JenaConnection,1,"
+The connection should be managed better, but not seems to be too late.
+",1,0,0,0,0,0,0
+blob,org.apache.jena.jdbc.JenaDriver,1,"
+Also the driver should be better managed.
+",0,0,0,0,0,1,0
+blob,org.apache.jena.ontology.impl.OntResourceImpl,1,"
+Resources are something we have to look at.
+",0,0,0,0,0,1,0
+blob,org.apache.jena.ontology.impl.TestResource,2,"
+Resources are something we have to look at.
+",0,0,0,0,0,1,0
+blob,org.apache.jena.ontology.Profile,1,"
+The class has been introduce for a reason, but then it underwent too many changes too often, becoming something to care about. 
+",0,1,0,0,0,0,0
+blob,org.apache.jena.rdf.model.test.TestSeqMethods,1,"
+The sequences are too many, this is the point.
+",0,0,0,0,1,0,0
+blob,org.apache.jena.rdfxml.xmlinput.NTriple,2,"
+Thanks for your email, it is indeed a huge class that does too many things
+",0,0,0,1,0,0,0
+blob,org.apache.jena.rdfxml.xmloutput.impl.Unparser,2,"
+This is a large class that should be made better.
+",0,0,0,1,0,0,0
+blob,org.apache.jena.reasoner.rulesys.impl.LPInterpreter,1,"
+The class is too large.
+",0,0,0,1,0,0,0
+blob,org.apache.jena.reasoner.rulesys.impl.RuleClauseCode,1,"
+The class is too large, it's true. 
+",0,0,0,1,0,0,0
+blob,org.apache.jena.reasoner.rulesys.test.TestBackchainer,1,"
+The class is too large.
+",0,0,0,1,0,0,0
+blob,org.apache.jena.reasoner.rulesys.test.TestBasicLP,1,"
+Too many LOC, we should refactor it.
+",0,0,0,1,0,0,0
+blob,org.apache.jena.reasoner.rulesys.test.TestBugs,1,"
+The class is too large, it's true, but not a hige problem
+",0,0,0,1,0,0,0
+blob,org.apache.lucene.dependencies.GetMavenDependenciesTask,1,"
+The class does too many things, but at the moment we cannot do anything else.
+",0,0,0,0,1,0,0
+blob,org.apache.lucene.search.suggest.analyzing.AnalyzingInfixSuggester,1,"
+The suggester may be divided in three classes at least, but now we have other priorities
+",0,0,0,0,0,1,0
+blob,org.apache.lucene.search.suggest.analyzing.AnalyzingInfixSuggesterTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.lucene.search.suggest.analyzing.AnalyzingSuggesterTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.lucene.search.suggest.analyzing.FuzzySuggesterTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.lucene.validation.LibVersionsCheckTask,1,"
+The class does too many things, but at the moment we cannot do anything else.
+",0,0,0,0,1,0,0
+blob,org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder,0,"
+Since this is a test, it is ok for us to have it a bit larger than other classes.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.backend.hadoop.hbase.HBaseStorage,0,"
+HBaseStorage manages the storage of Hbase: as there many things to consider, we need this class as it.
+",0,0,0,0,0,1,0
+blob,org.apache.pig.Main,0,"
+the class just runs things, so why shall we modify it?
+",0,1,0,0,0,0,0
+blob,org.apache.pig.pigunit.Cluster,1,"
+The cluster implements too many algorithms, it must be fixed. 
+",0,0,0,0,0,1,0
+blob,org.apache.pig.pigunit.MiniClusterRunner,1,"
+The cluster implements too many algorithms, it must be fixed. 
+",0,0,0,0,0,1,0
+blob,org.apache.pig.pigunit.pig.GruntParser,1,"
+the parser may be improved.
+",0,0,0,0,0,1,0
+blob,org.apache.pig.pigunit.PigTest,1,"
+This is a test after all.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.junit.OrderedJUnit4Runner,1,"
+this is a test and we do not refact tests.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.pigmix.mapreduce.L1,1,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L10,1,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L11,1,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L12,1,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L13,1,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L14,1,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L15,1,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L16,0,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L17,0,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L2,0,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L3,0,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L4,0,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L5,0,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L6,0,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L7,0,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L8,0,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigmix.mapreduce.L9,0,"
+The modifications to this class are generally simple, that's why we do not refactor it.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.pigunit.TestPigTest,0,"
+It's just a test.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestBuiltin,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestDataBag,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestEvalPipeline,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestEvalPipeline2,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestEvalPipelineLocal,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestGrunt,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestHBaseStorage,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestLogicalPlanBuilder,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestMacroExpansion,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestMergeJoin,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestMRCompiler,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestMultiQueryCompiler,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestNewPlanLogToPhyTranslationVisitor,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestNewPlanOperatorPlan,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestNewPlanPushDownForeachFlatten,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestNewPlanPushUpFilter,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestParamSubPreproc,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestPigRunner,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestPigServer,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestPOCast,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestProjectRange,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestPruneColumn,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestSchema,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestStore,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.TestTypeCheckingValidatorNewLP,0,"
+It is a test, no need to look into it.
+",0,0,0,0,0,0,1
+blob,org.apache.pig.test.Util,0,"
+This i a utility class, its OK to have it as is. 
+",0,0,0,0,0,1,0
+blob,org.apache.pig.test.utils.AccumulativeSumBag,2,"
+The way the class acts may be improved, for instance by dividing the methods into multiple classes. 
+",0,0,0,1,0,0,0
+blob,org.apache.pig.test.utils.AccumulatorBagCount,2,"
+The way the class acts may be improved, for instance by dividing the methods into multiple classes. 
+",0,0,0,1,0,0,0
+blob,org.apache.pig.test.utils.dotGraph.DotEdge,0,"
+If it doesn't change, we cannot modify it freely.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.utils.dotGraph.DotGraph,0,"
+If it doesn't change, we cannot modify it freely.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.utils.dotGraph.DotGraphReader,0,"
+If it doesn't change, we cannot modify it freely.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.utils.dotGraph.DotNode,0,"
+If it doesn't change, we cannot modify it freely.
+",0,1,0,0,0,0,0
+blob,org.apache.pig.test.utils.FILTERFROMFILE,2,"
+Too many LOC, it should be refactored.
+",0,0,0,1,0,0,0
+blob,org.apache.pig.test.utils.HelperEvalFuncUtils,2,"
+While this is a utility class, this needs to be fixed as soon as possible. 
+",0,0,0,0,0,1,0
+blob,org.apache.pig.test.utils.UDFContextTestLoader,1,"
+The loaded has three different ways to work, one class for each way may be done.
+",0,0,0,0,1,0,0
+blob,org.apache.pig.test.utils.UDFContextTestLoaderWithSignature,1,"
+The loader has three different ways to work, one class for each way may be done.
+",0,0,0,0,0,1,0
+blob,org.apache.pig.test.utils.UPPER,1,"
+the parsing tool is something we are still developing, so it is normal to have these cases.
+",0,0,0,0,0,1,0
+blob,org.apache.pig.test.utils.URLPARSE,1,"
+the parsing tool is something we are still developing, so it is normal to have these cases.
+",0,0,0,0,0,1,0
+blob,org.apache.pig.test.utils.WordCount,1,"
+the parsing tool is something we are still developing, so it is normal to have these cases.
+",0,0,0,0,0,1,0
+blob,org.apache.solr.analytics.accumulator.FacetingAccumulator,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.analytics.facet.FieldFacetTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.analytics.statistics.StatsCollectorSupplierFactory,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.BaseDistributedSearchTestCase,1,"
+it is a test, its good to have large tests.
+",0,0,0,1,0,0,1
+blob,org.apache.solr.client.solrj.impl.BasicHttpSolrClientTest,1,"
+it is a test, its good to have large tests.
+",0,0,0,1,0,0,1
+blob,org.apache.solr.client.solrj.impl.CloudSolrClient,1,"
+the client might be better organized but i don't have an idea of how to do it.
+",0,0,0,0,0,1,0
+blob,org.apache.solr.client.solrj.impl.HttpSolrClient,1,"
+the client might be better organized but i don't have an idea of how to do it.
+",0,0,0,0,0,1,0
+blob,org.apache.solr.client.solrj.impl.LBHttpSolrClient,1,"
+it is huge, but not really as critical as it can appear.
+",0,0,0,1,0,0,0
+blob,org.apache.solr.client.solrj.io.stream.StreamExpressionTest,1,"
+it is a test, its good to have large tests.
+",0,0,0,1,0,0,1
+blob,org.apache.solr.client.solrj.io.stream.StreamingTest,1,"
+it is a test, its good to have large tests.
+",0,0,0,1,0,0,1
+blob,org.apache.solr.client.solrj.request.SchemaTest,1,"
+it is a test, its good to have large tests.
+",0,0,0,1,0,0,1
+blob,org.apache.solr.client.solrj.SolrClient,1,"
+the client might be better organized but i don't have an idea of how to do it.
+",0,0,0,0,0,1,0
+blob,org.apache.solr.client.solrj.SolrExampleTests,1,"
+it is a test, its good to have large tests.
+",0,0,0,1,0,0,1
+blob,org.apache.solr.client.solrj.SolrQuery,1,"
+the client might be better organized but i don't have an idea of how to do it.
+",0,0,0,0,0,1,0
+blob,org.apache.solr.cloud.AbstractFullDistribZkTestBase,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.cloud.BaseCdcrDistributedZkTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.cloud.BasicDistributedZkTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.cloud.CollectionsAPIDistributedZkTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.cloud.OverseerCollectionConfigSetProcessorTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.cloud.OverseerCollectionMessageHandler,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.cloud.OverseerTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.cloud.TestCloudPivotFacet,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.cloud.ZkController,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.common.cloud.SolrZkClient,1,"
+the client might be better organized but i don't have an idea of how to do it.
+",0,0,0,0,0,1,0
+blob,org.apache.solr.common.cloud.ZkStateReader,1,"
+I dont' have too much to say, the class is big and should be addressed.
+",0,0,0,0,1,0,0
+blob,org.apache.solr.core.CoreContainer,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.core.SolrCore,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.core.SolrResourceLoader,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.CursorPagingTest,1,"
+it doesnt change, so no priority.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.hadoop.MorphlineGoLiveMiniMRTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.handler.admin.CoreAdminHandler,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.handler.admin.LukeRequestHandler,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.handler.component.FacetComponent,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.handler.component.QueryComponent,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.handler.component.RangeFacetRequest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.handler.component.SpellCheckComponent,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.handler.component.StatsComponentTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.handler.dataimport.AbstractSqlEntityProcessorTestCase,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.handler.dataimport.DocBuilder,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.handler.dataimport.MailEntityProcessor,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.handler.TestReplicationHandler,1,"
+It don't change so often, that's why it has a limited importance.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.schema.FieldType,1,"
+This may be split, we already planned to do it but in the end we did not reach a full agreement on how to do it.
+",0,0,0,1,0,0,0
+blob,org.apache.solr.schema.IndexSchema,1,"
+We discussed about this class, it does too many things and should be improved. 
+",0,0,1,0,0,0,0
+blob,org.apache.solr.schema.TestCloudManagedSchemaConcurrent,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.SolrTestCaseJ4,1,"
+it is a test, its good to have large tests.
+",0,0,0,1,0,0,1
+blob,org.apache.solr.update.processor.ParsingFieldUpdateProcessorsTest,1,"
+The class does not often change, so we can postpone.
+",0,1,0,0,0,0,0
+blob,org.apache.solr.util.hll.HLL,1,"
+this is a utility class, its normal to have more methods.
+",0,0,0,0,0,1,0
+blob,org.apache.solr.util.SimplePostTool,1,"
+This is a sample class, no need to refactor
+",0,0,0,0,0,1,0
+blob,org.apache.solr.util.SolrCLI,1,"
+this is a utility class, its normal to have more methods.
+",0,0,0,0,0,1,0
+blob,org.apache.solr.util.SolrPluginUtils,1,"
+this is a utility class, its normal to have more methods.
+",0,0,0,0,0,1,0
+blob,org.eclipse.cdt.debug.ui.memory.traditional.Rendering,1,"
+This is not often changed, that's why this is not a priority now.
+",0,1,0,0,0,0,0
+blob,org.eclipse.cdt.internal.core.dom.lrparser.cpp.CPPNoCastExpressionParser,2,"
+I have problems understanding it
+",0,0,0,0,1,0,0
+blob,org.eclipse.cdt.internal.core.dom.lrparser.cpp.CPPNoFunctionDeclaratorParser,2,"
+I have problems understanding it
+",0,0,0,0,1,0,0
+blob,org.eclipse.cdt.internal.core.dom.lrparser.cpp.CPPSizeofExpressionParser,2,"
+I cannot understand it or maintain in.
+",0,0,0,0,1,0,0
+blob,org.eclipse.cdt.internal.core.dom.lrparser.cpp.CPPTemplateTypeParameterParser,2,"
+Too much LOC, poorly understandable
+",0,0,0,1,1,0,0
+shotgun-surgery,org.apache.cayenne.access.DbLoader,2,"
+there are a lot of method calls to external classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.access.IncrementalFaultList,2,"
+coupling should be reduced.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.access.jdbc.EJBQLConditionTranslator,0,"
+methods could have been better organized to avoid these too many calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.access.ObjectStore,2,"
+the class makes a number of calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.access.ReturnTypesMappingTest,2,"
+too high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.access.trans.SelectTranslatorTest,0,"
+class has a lot of external calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.exp.Expression,0,"
+the methods of the class do not always talk to each other, while they call methods of other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.exp.ExpressionFactory,2,"
+the coupling if this class is high.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.exp.parser.ExpressionParser,2,"
+too high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.exp.parser.ExpressionParserTokenManager,2,"
+the amount of method calls should be reduced. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.map.DbEntity,2,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.map.ObjEntity,2,"
+high coupling, too many calls made over other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.map.ObjRelationship,2,"
+excessive amount of method calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.modeler.ProjectController,2,"
+the methods might be moved here and there to reduce excessive coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.modeler.ProjectTreeView,2,"
+the class is tight to many other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.query.SelectQuery,0,"
+I see that the class has a slightly high coupling, but I don't think this is critical.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.query.SelectQueryTest,0,"
+many methods make calls to other methods to gather data.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.util.concurrentlinkedhashmap.ConcurrentLinkedHashMap,2,"
+too many external calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.util.EqualsBuilder,0,"
+the coupling is high.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.wocompat.parser.Parser,2,"
+the class performs several calls to other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cayenne.wocompat.parser.ParserTokenManager,2,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.aegis.type.basic.BeanTest,0,"
+the class relies on several other classes. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.aegis.type.basic.BeanType,0,"
+the interface of some methods is unclear. 
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.binding.corba.runtime.CorbaObjectReader,0,"
+the number of invokations is high.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.binding.soap.SoapBindingFactory,0,"
+high coupling, the code is complex and hard to understand.
+",1,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.endpoint.dynamic.DynamicClientFactory,2,"
+excessive number of methods' call toward other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.javascript.JavascriptUtils,2,"
+the class invokes several methods from other classes, making the code pretty hard to understand.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.javascript.service.ServiceJavascriptBuilder,2,"
+there are several calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.jaxb.JAXBDataBinding,0,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.jaxb.JAXBEncoderDecoder,0,"
+the class is complex, makes too many invokations.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.jaxb.JAXBSchemaInitializer,0,"
+some methods should be moved to better locations.
+",0,0,0,1,0,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.client.AbstractClient,2,"
+the interaction that methods have with other methods of the same class is unclear.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.client.ClientProxyImpl,2,"
+the code is hard to understand, both because of lack of documentation and low cohesion.
+",0,0,1,0,1,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.client.WebClient,2,"
+there are methods which should be placed in better locations.
+",0,0,0,1,0,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.ext.search.fiql.FiqlParser,1,"
+the problem is that the class is highly coupled with external classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.impl.UriBuilderImpl,1,"
+there is some method doing too much.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.impl.UriBuilderImplTest,1,"
+the complexity of the methods must be taken under control.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.model.wadl.WadlGenerator,1,"
+high coupling makes the code not very much understandable. 
+",1,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.model.wadl.WadlGeneratorTest,1,"
+class should be less tight to other data classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.provider.AbstractJAXBProvider,1,"
+too high coupling for this class.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.provider.json.JSONProviderTest,1,"
+a number of methods should be simplified, maybe also moved to other classes.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.provider.ProviderFactory,1,"
+some methods are too complex. 
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.SelectMethodCandidatesTest,1,"
+the location of some methods could be updated.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.utils.InjectionUtils,1,"
+the class suffers from high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.utils.JAXRSUtils,1,"
+high coupling, the code has became complex to be understood.
+",1,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.utils.JAXRSUtilsTest,1,"
+perhaps, some methods could have been better designed so that they would not need to call external classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.jaxrs.utils.ResourceUtils,1,"
+the class is too tight to many other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.jaxws.EndpointImpl,1,"
+the coupling is high and the complexity increases because of that.
+",1,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.jaxws.handler.HandlerChainInvokerTest,1,"
+the methods look wrongly placed - they should be perhaps moved to other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.jaxws.ServiceImpl,1,"
+methods should be redesigned to call less external members.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.jaxws.support.JaxWsServiceConfiguration,2,"
+there is a problem with coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.management.web.logging.ReadOnlyFileStorage,2,"
+the class has been changed to many times and now it is hard to explain why certain methods still belong to it.
+",0,1,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.maven_plugin.AbstractCodegenMoho,0,"
+some methods perform too many calls. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.staxutils.StaxUtils,0,"
+methods are not related to each other. 
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.cxf.sts.operation.AbstractOperation,1,"
+it has methods that should be at least moved. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.sts.operation.IssueOnbehalfofUnitTest,1,"
+the class is not cohesive.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.cxf.sts.operation.IssueSamlClaimsUnitTest,1,"
+it contains methods that are too coupled to other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.sts.operation.ValidateTokenTransformationUnitTest,1,"
+being the class large with many methods, maintaining it is sometimes hard.
+",0,0,0,1,0,0,0
+shotgun-surgery,org.apache.cxf.systest.dispatch.DispatchClientServerTest,1,"
+the identity of the class is unclear.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.systest.handlers.HandlerInvocationTest,1,"
+slightly high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.http.HTTPConduitTest,1,"
+some of the methods seem not really related to the class.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.jaxrs.BookStore,1,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.jaxrs.JAXRSMultipartTest,1,"
+the complexity of some methods is high.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.systest.jaxrs.JAXRSSoapBookTest,1,"
+the class is generally too related to others.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.jaxws.ClientServerMiscTest,1,"
+the class calls external APIs that make the code a mess.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.jaxws.ClientServerTest,1,"
+calls are too many.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.jms.JMSClientServerTest,1,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.sts.batch.SimpleBatchSTSClient,1,"
+it is not clear how to handle the high coupling of this class.
+",1,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.systest.type_test.AbstractTypeTestClient,1,"
+the understandability of the class is compromised.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.systest.type_test.AbstractTypeTestClient2,1,"
+lack of documentation, the code cannot be properly modified.
+",0,1,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.type_test.AbstractTypeTestClient3,1,"
+the effort required to change things is high.
+",0,1,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.type_test.AbstractTypeTestClient4,1,"
+many methods have problems with coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.ws.rm.SequenceTest,1,"
+this class is complex.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.systest.ws.saml.StaxSamlTokenTest,0,"
+it frequently changes, maybe because of the role the class has within the project.
+",0,1,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.ws.x509.StaxX509TokenTest,0,"
+too many external method calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.systest.ws.x509.X509TokenTest,0,"
+the class has too many methods.
+",0,0,0,1,0,0,0
+shotgun-surgery,org.apache.cxf.tools.corba.processors.idl.IDLLexer,0,"
+it would be better to keep the external calls under control. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.tools.corba.processors.idl.IDLParser,0,"
+the scope of the class is not clear enough.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.tools.corba.processors.wsdl.WSDLParameter,0,"
+high coupling makes things bad.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.tools.corba.processors.wsdl.WSDLToCorbaBinding,0,"
+the code is complicated to read.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.tools.corba.processors.wsdl.WSDLToCorbaHelper,0,"
+documentation missing and too many methods for one single class.
+",0,0,0,1,0,0,0
+shotgun-surgery,org.apache.cxf.tools.corba.processors.wsdl.WSDLToIDLAction,0,"
+the methods are long and complex.
+",0,0,0,1,1,0,0
+shotgun-surgery,org.apache.cxf.tools.corba.processors.WSDLToCorbaBindingTypeTest,0,"
+the code is long. 
+",0,0,0,1,0,0,0
+shotgun-surgery,org.apache.cxf.tools.corba.processors.WSDLToIDLGenerationTest,0,"
+long code with a lot of method calls.
+",0,0,0,1,0,0,0
+shotgun-surgery,org.apache.cxf.tools.java2wsdl.processor.JavaToProcessorTest,1,"
+it is unclear whether some methods are really in the right class.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.tools.wadlto.jaxrs.SourceGenerator,0,"
+high coupling hides maintainability.
+",1,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.tools.wsdlto.databinding.jaxb.JAXBDataBinding,0,"
+the cohesion of some methods with respect to the others is debatable.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.cxf.tools.wsdlto.frontend.jaxws.customization.CustomizationParser,0,"
+the problem is clearly the high coupling of some methods.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.internal.ParameterProcessor,0,"
+it is hard to read (and also to change)
+",0,1,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.tools.wsdlto.jaxws.CodeGenBugTest,1,"
+the class triggers too many changes - not all hard to do, but still a lot.
+",0,1,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.tools.wsdlto.jaxws.CodeGenTest,1,"
+some methods should belong to different classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.tools.wsdlto.WSDLToJavaContainer,0,"
+the code seems to have problems in terms of coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.transport.http_jetty.JettyHTTPDestinationTest,1,"
+of course, this is hard to touch.
+",0,1,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.transport.http_jetty.JettyHTTPServerEngine,1,"
+high cupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.transport.http.AbstractHTTPDestination,1,"
+too many calls, missing documentation on how to maintain it.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.transport.http.HTTPConduit,1,"
+there are methods that seem not very related to the class.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.cxf.transport.jms.JMSUtils,1,"
+this should possibly be improved by relocating certain classes. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.addressing.EndpointReferenceUtils,0,"
+maybe the cohesion can be improved. 
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.addressing.impl.MAPAggregatorImpl,1,"
+many methods have unrelated functions.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.policy.PolicyEngineTest,1,"
+the class does several things and does them by calling a number of other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.rm.DestinationSequenceTest,1,"
+that's hard to modify, since every time I change it several other classes may be impacted.
+",0,1,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.rm.persistence.jdbc.RMTxStore,1,"
+coupling too high… 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.rm.persistence.jdbc.RMTxStoreTestBase,1,"
+I would move methods to different locations, this would reduce the number of changes of this class.
+",0,1,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.rm.RMEndpoint,1,"
+coupling and cohesion should be re-fixed.
+",1,0,1,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.rm.RMManager,1,"
+some elements may be moved to improve cohesion.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.rm.RMManagerTest,1,"
+I don't really understand the goal of certain methods.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.ws.rm.soap.RetransmissionQueueImpl,1,"
+perhaps, certain methods have too many calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.rm.VersionTransformer,1,"
+most of the methods are complex.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.ws.security.trust.AbstractSTSClient,1,"
+the class seems not very cohesive.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.security.wss4j.PolicyBasedWSS4JInInterceptor,1,"
+a number of methods have relations with other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.security.wss4j.policyhandlers.AbstractBindingBuilder,1,"
+unclear fit of methods and use of parameters.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.cxf.ws.security.wss4j.StaxRoundTripTest,1,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.security.wss4j.StaxToDOMRoundTripTest,1,"
+lots of method calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor,1,"
+the data used by the class mostly comes from external classes, this makes it like a hub.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean,1,"
+methods call other methods that call other methods.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.wsdl11.ServiceWSDLBuilder,1,"
+the class is large enough to be divided. 
+",0,0,0,1,0,0,0
+shotgun-surgery,org.apache.cxf.wsdl11.WSDLServiceBuilder,1,"
+maintaining this class can be hard because it is related to a number of other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.cxf.wsdl11.WSDLServiceBuilderTest,1,"
+low cohesion.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.api.security.user.GroupTest,2,"
+the coupling of this class looks high.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.api.security.user.UserManagerSearchTest,2,"
+many classes have relations with this class.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.aws.ext.ds.S3Backend,2,"
+external methods are often called by this class.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.commons.AbstractNode,1,"
+the class uses many other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.commons.cnd.CompactNodeTypeDefReader,1,"
+methods should be better collaborate to the goal of the class.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.commons.JcrUtils,1,"
+methods are poorly cohesive.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.commons.json.JsonParserTest,1,"
+the responsibilities of the methods are not very well understandable.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.commons.query.GQL,1,"
+code is complex.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.commons.query.sql2.Parser,1,"
+too many data requested to other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.BatchedItemOperations,2,"
+this is a kind of hub toward other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.CachingHierarchyManager,2,"
+the amount of services requested by this class is high.
+",1,0,0,0,0,1,0
+shotgun-surgery,org.apache.jackrabbit.core.cluster.ClusterNode,2,"
+the methods of this class seem to use too often other classes to proceed with their job.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.config.RepositoryConfig,2,"
+high coupling, complex code.
+",1,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.core.data.CachingDataStore,1,"
+it seems to me that the main problem of this class is the amount of data requested by other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.data.db.DbDataStore,1,"
+some methods should be moved for improving readability.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.core.data.MultiDataStore,1,"
+method calls are too many.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.data.TestCaseBase,1,"
+coupling may be increased.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.fs.db.DatabaseFileSystem,2,"
+the class lacks of documentation and is coupled to other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.HierarchyManagerImpl,2,"
+coupling is high.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.ItemManager,2,"
+the class should be improved in terms of how methods call other methods.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.journal.DatabaseJournal,2,"
+the coupling should be reduced.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.lock.LockManagerImpl,2,"
+methods of the class use too many data from other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.NodeImpl,2,"
+yes, I notice a high coupling here. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.nodetype.EffectiveNodeType,2,"
+the class is coupled to others.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.nodetype.NodeTypeRegistry,2,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.nodetype.xml.TestAll,2,"
+it's clear that the class makes to many calls.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.core.observation.EventState,2,"
+lack of design, the class has low cohesion and high coupling.
+",1,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.persistence.bundle.AbstractBundlePersistenceManager,2,"
+there are methods having too much to do with other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.persistence.db.DatabasePersistenceManager,2,"
+the methods are not really cohesive.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.persistence.pool.BundleDbPersistenceManager,1,"
+the cohesion of the class is low.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.persistence.util.BundleReader,1,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.persistence.util.NodePropBundle,1,"
+complex code due to too many calls.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.core.persistence.xml.XMLPersistenceManager,1,"
+it seems that this is a problem of design due to high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.PropertyImpl,2,"
+lot of methods call lot of methods. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.query.lucene.AbstractIndex,1,"
+class is too much coupled with many other classes. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.query.lucene.CachingIndexReader,1,"
+the coupling is particularly high in this case.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.query.lucene.ChildAxisQuery,1,"
+some methods could do their work without requesting too many data.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.query.lucene.ConsistencyCheck,1,"
+coupling is high and there is no documentation.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.query.lucene.LuceneQueryBuilder,1,"
+the class' methods call too many times other methods.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.query.lucene.LuceneQueryFactory,0,"
+the class does some external calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.query.lucene.MoreLikeThis,0,"
+methods of this class have relation with other methods
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.query.lucene.MultiIndex,0,"
+the cohesion may be improved.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.query.lucene.NodeIndexer,0,"
+there are several methods calling other classes. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.query.lucene.RowIteratorImpl,0,"
+coupling is relatively high.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.RepositoryImpl,2,"
+the coupling of the class is high and this makes the code quite complex to understand.
+",1,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.core.security.authentication.AbstractLoginModule,0,"
+in some cases, the class may be less proactive in asking resources.
+",0,0,0,0,0,1,0
+shotgun-surgery,org.apache.jackrabbit.core.security.authorization.AbstractWriteTest,0,"
+the methods of the class use data from external resources.
+",1,0,0,0,0,1,0
+shotgun-surgery,org.apache.jackrabbit.core.security.authorization.PrivilegeRegistry,0,"
+there is too high coupling here.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.security.user.GroupImpl,0,"
+data are not retained in the class. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.security.user.UserImporter,0,"
+some methods could be moved somewhere else. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.security.user.UserImporterTest,0,"
+the cohesion of this class is low and may be improved.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.security.user.UserManagerImpl,0,"
+it looks like some of the methods could be moved.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.security.user.UserManagerImplTest,0,"
+different methods do different things. 
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.SessionImpl,2,"
+not fully convinced by how methods use external resources. 
+",1,0,0,0,0,1,0
+shotgun-surgery,org.apache.jackrabbit.core.state.NodeState,0,"
+the code can be seen as complex.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.core.state.NodeStateMergerTest,1,"
+methods are not very much connected to each other.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.state.SessionItemStateManager,0,"
+the readability is threatened by the many calls that the class does.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.core.state.SharedItemStateManager,1,"
+the class may reduce the number of calls it performs by moving methods to different locations.
+",0,0,0,1,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.version.InternalVersionHistoryImpl,1,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.version.InternalVersionManagerBase,1,"
+the class makes several calls to other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.version.InternalVersionManagerImpl,1,"
+a number of classes are called by it.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.version.InternalXAVersionManager,1,"
+the code is complex because if you want to understand it you have to follow the calls that the class does.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.core.version.NodeStateEx,1,"
+some methods can be moved to avoid excessive coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.WorkspaceImpl,2,"
+there is a high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.core.XATest,2,"
+the class uses too many classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.j2ee.RepositoryStartupServlet,0,"
+some methods suffer from high coupling. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.jcr2spi.hierarchy.ChildNodeEntriesImpl,1,"
+the operations are not made in-house.
+",0,0,0,0,0,1,0
+shotgun-surgery,org.apache.jackrabbit.jcr2spi.hierarchy.NodeEntryImpl,1,"
+the class has high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.jcr2spi.lock.LockManagerImpl,1,"
+class might be split in two. 
+",0,0,0,1,0,0,0
+shotgun-surgery,org.apache.jackrabbit.jcr2spi.NodeImpl,1,"
+there are too many methods.
+",0,0,0,1,0,0,0
+shotgun-surgery,org.apache.jackrabbit.jcr2spi.nodetype.NodeTypeRegistryImpl,2,"
+too high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.jcr2spi.PropertyImpl,1,"
+a number of problems, like missing docs, too many calls etc.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.jcr2spi.SessionImpl,1,"
+the number of classes invoked looks high.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.jcr2spi.WorkspaceManager,1,"
+coupling too high.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.rmi.client.ClientNode,1,"
+the methods do not cooperate with each other but rather use external methods. 
+",1,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.rmi.client.ClientSession,1,"
+coupling looks high.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.rmi.server.ServerNode,1,"
+there are methods performing to many calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.server.io.DefaultHandler,1,"
+data are gathered by external classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.server.remoting.davex.JsonDiffHandler,1,"
+there are too many LOC in this class and some methods are overly complex.
+",0,0,0,1,1,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.AbstractRepositoryService,2,"
+poorly understandable.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.logging.RepositoryServiceLogger,2,"
+low design quality impacts readability.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.name.NameConstants,2,"
+the methods of this class are not very well related to each other. 
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.nodetype.NodeTypeDefDiff,2,"
+cohesion is low.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.query.qom.QueryObjectModelFactoryImpl,2,"
+the class relies too much on other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.query.sql.JCRSQLParser,1,"
+code duplication, missing documentation, low cohesion, high coupling.
+",1,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.query.sql.JCRSQLParserTokenManager,1,"
+the methods do too much.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.query.sql.JCRSQLQueryBuilder,1,"
+some of these methods could be split to make them less complex.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.query.sql.QueryFormat,1,"
+the code is sometimes overly complex. 
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.query.xpath.XPath,1,"
+the class makes too many calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.query.xpath.XPathQueryBuilder,1,"
+high coupling. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.commons.query.xpath.XPathTokenManager,1,"
+too many classes are related to this one. 
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.spi.RepositoryService,2,"
+the class is coupled to at least 4 different classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.spi2dav.RepositoryServiceImpl,1,"
+hard to udnerstand because of the lack of comments on how to use methods. 
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.spi2davex.BatchTest,1,"
+code is complex and seems to be affected by some form of spaghetti code. 
+",0,0,1,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.spi2davex.RepositoryServiceImpl,1,"
+the class is too big and many methods should be simplified. 
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.spi2jcr.RepositoryServiceImpl,1,"
+cohesion should be improved. 
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.standalone.cli.info.AbstractLsNodes,0,"
+the coherence of the methods wrt the responsibility of the class should be explicit. 
+",0,0,1,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.test.AbstractJCRTest,1,"
+there are methods that do too much.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.test.api.ExportDocViewTest,1,"
+methods are calling too much things from others.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.test.api.NodeReadMethodsTest,1,"
+there is poor communication between the methods. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.test.api.NodeTest,1,"
+high coupling, complex code.
+",1,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.test.api.nodetype.PredefinedNodeTypeTest,1,"
+the coupling should be made lower.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.test.api.SerializationTest,1,"
+too many methods calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.test.api.ShareableNodeTest,1,"
+the amount of data requested from outside is worrying.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.test.api.util.Text,1,"
+there are methods calling too much.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.test.api.version.simple.RestoreTest,1,"
+too coupled with the system. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.test.api.version.VersionHistoryTest,1,"
+class is not cohesive, the coupling seems high.
+",1,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.test.api.version.VersionTest,1,"
+there are several classes that participate to the activities of this one. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.util.Text,1,"
+class does too much.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.util.XMLChar,1,"
+some splitting may be done to increase connectivity.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.webdav.jcr.DefaultItemCollection,1,"
+the cohesion of the class may be improved.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.webdav.jcr.transaction.TxLockManagerImpl,1,"
+among the top issues, I see complexity and repetitiveness of the code.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.webdav.jcr.VersionControlledItemCollection,1,"
+a number of methods call too many methods coming from other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.webdav.server.AbstractWebdavServlet,0,"
+not very well designed, the number of external calls is too high. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.webdav.simple.DavResourceImpl,1,"
+the code may be simplified.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.jackrabbit.webdav.WebdavRequestImpl,0,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.jackrabbit.webdav.xml.DomUtil,0,"
+there are some methods that are too complex to understand.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.lucene.index.TieredMergePolicy,0,"
+some methods do too many calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.mahout.cf.taste.hadoop.item.RecommenderJobTest,2,"
+the complexity of this class is basically due to the high number of calls it performs.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.mahout.cf.taste.impl.common.FastByIDMap,2,"
+this class has a high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.mahout.cf.taste.impl.common.FastMap,2,"
+many classes participate to the functionalities of this class.
+",1,0,0,0,0,1,0
+shotgun-surgery,org.apache.mahout.cf.taste.impl.model.file.FileDataModel,2,"
+there is an excessive amount of method calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.mahout.cf.taste.impl.model.jdbc.AbstractJDBCDataModel,2,"
+the class appears to be tight to other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.mahout.cf.taste.impl.model.mongodb.MongoDBDataModel,2,"
+there is an inappropriate number of calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.mahout.math.AbstractMatrix,2,"
+the code is made complex by the many method calls it does.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.mahout.math.AbstractVector,2,"
+lack of documentation, code is hard to understand.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.mahout.math.Arrays,2,"
+several methods do too many calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.mahout.math.function.Functions,2,"
+too many calls.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.mahout.math.list.Abstract$,2,"
+the class contains methods with high coupling and with complex code.
+",1,0,0,0,1,0,0
+shotgun-surgery,org.apache.mahout.math.Sorting,2,"
+too high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.mahout.math.VectorTest,2,"
+the number of methods doing calls is high. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler,1,"
+the methods often call a lot of other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler,1,"
+several methods should be moved to reduce coupling. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer,1,"
+the coupling is a problem.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach,0,"
+not clear the role of certain methods with this class.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange,0,"
+the readability can be improved, for instance by adding comments.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.pig.backend.hadoop.executionengine.tez.plan.TezCompiler,0,"
+not all methods are in the proper location, increasing the coupling of the class.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder,0,"
+sometimes the methods rely too much on external resources.
+",1,0,0,0,0,1,0
+shotgun-surgery,org.apache.pig.backend.hadoop.hbase.HBaseStorage,0,"
+this is hard to test, given the environment required.
+",0,0,0,0,0,0,1
+shotgun-surgery,org.apache.pig.Builtin,1,"
+there are methods that are too hard to udnerstand. 
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.pig.builtin.OrcStorage,0,"
+documentation is lacking and it makes hard to understand some methods.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.pig.builtin.TestAvroStorage,0,"
+too high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.data.BinInterSedes,0,"
+some of the methods are placed in the wrong class.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.data.DataType,2,"
+the class has an extremely high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.data.SchemaTuple,2,"
+too many calls toward other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.DataBag,0,"
+high coupling and low cohesion, exactly the opposite of what should be.
+",1,0,1,0,0,0,0
+shotgun-surgery,org.apache.pig.EvalPipeline,0,"
+too many calls to other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.EvalPipelineLocal,0,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.Grunt,0,"
+too many classes play a role in the activities made by this class.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.HBaseStorage,0,"
+the code is often complex, this can create issues with other devs touching it.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.pig.impl.io.FileLocalizer,2,"
+the code is made complex, the class would need some refactoring to reduce the number of methods contained in it.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.pig.impl.logicalLayer.schema.Schema,2,"
+high coupling, the code is complex, hard to understand and to modify.
+",1,1,0,0,1,0,0
+shotgun-surgery,org.apache.pig.impl.PigContext,2,"
+the coupling of this class is worrying.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.impl.plan.OperatorPlan,0,"
+some parts of the class may be made simpler.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.pig.LogicalPlanBuilder,0,"
+perhaps some methods should be moved 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.MacroExpansion,0,"
+methods do several calls. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.MergeJoin,0,"
+the actual functionalities of the class are hidden behind the many calls it does.
+",0,0,0,0,1,1,0
+shotgun-surgery,org.apache.pig.MRCompiler,0,"
+high coupling. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.MultiQueryCompiler,0,"
+the class can be organized better to avoid that other classes are called.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.newplan.logical.relational.LogicalSchema,0,"
+while some methods are a bit too complex, the main problem is that many classes are called from them. 
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.pig.newplan.logical.relational.LogToPhyTranslationVisitor,0,"
+coupling is becoming high.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.newplan.logical.visitor.TypeCheckingRelVisitor,0,"
+there are a lot of classes called by this class.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.parser.LogicalPlanBuilder,0,"
+high coupling.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.scripting.jruby.RubySchema,0,"
+coupling preservation should be applied. 
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.test.pigmix.datagen.DataGenerator,0,"
+too many calls inside this class.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.test.utils.GenPhyOp,0,"
+maintaining the class can become hard because it is related to a number of other classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.pig.tools.grunt.GruntParser,0,"
+methods are too complex and not really understandable.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.solr.cloud.AbstractFullDistribZkTestBase,0,"
+pretty high coupling worsen readability.
+",1,0,0,0,1,0,0
+shotgun-surgery,org.apache.solr.cloud.BasicDistributedZk,0,"
+there exist method chains that can be avoided.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.solr.cloud.CollectionsAPIDistributedZkTest,0,"
+the coupling should be kept under control at some point.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.solr.cloud.OverseerCollectionProcessor,0,"
+it changes frequently, despite almost never with serious consequences.
+",0,1,0,0,0,0,0
+shotgun-surgery,org.apache.solr.cloud.OverseerTest,0,"
+I'd refactor this class to increase the interaction of the methods it contains.
+",0,0,1,0,0,0,0
+shotgun-surgery,org.apache.solr.cloud.ZkController,0,"
+part of the code is too hard to udnerstand, some comments should be added.
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.solr.core.CoreContainer,0,"
+most of the data are got from external data holders.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.solr.core.SolrCore,0,"
+the code may be made simpler. 
+",0,0,0,0,1,0,0
+shotgun-surgery,org.apache.solr.core.SolrResourceLoader,0,"
+methods of this class rely on external classes.
+",1,0,0,0,0,0,0
+shotgun-surgery,org.apache.tools.bzip2r.CBZip2OutputStream,1,"
+the cohesion of the class should be improved.
+",0,0,1,0,0,0,0

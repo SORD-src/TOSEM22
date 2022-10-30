@@ -1,0 +1,16 @@
+Greetings,
+
+I see the point, thanks.
+
+Given the class org.apache.pig.piggybank.evaluation.TestOver that you recently modified, I would kindly ask you to answer the following questions.
+
+(1) Were you aware of the presence of a design flaw? (Please answer Yes/No)
+Yes
+
+(2) If yes to question (1), may you please briefly describe the type of design flaw affecting the class?
+Not really an issue.
+
+(3) If yes to question (1), may you please rate the criticality of the design flaw from 1 (very low) to 5 (very high)?
+2
+
+cheers,\nXXX

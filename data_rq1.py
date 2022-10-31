@@ -153,9 +153,8 @@ if __name__ == "__main__":
     remove_project = False
     params = []
     for smell in smells:
-        for remove in [False]:
-            for n_estimators in range(10,310,10):
-                params.append((smell,remove_project,n_estimators))
+        for n_estimators in range(10,310,10):
+            params.append((smell,remove_project,n_estimators))
     pool = Pool(7)
     pool.starmap(predict, params)
 

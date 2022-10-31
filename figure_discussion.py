@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import shap
 from matplotlib import pyplot as plt
+from scipy.stats import spearmanr
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import LeaveOneOut
 from sklearn.preprocessing import minmax_scale
@@ -165,7 +166,22 @@ def extract(smell, classname, extract_predicted):
     plt.show()
     plt.savefig('./results/figs/discussion/'+smell+'_'+classname+'_'+str(extract_predicted)+'.pdf', bbox_inches='tight')
 
+def correlation(smell):
+    base = './data/'
 
+    df = pd.read_csv(base + 'all_' + smell + '_merged_classname.csv').reset_index(drop=True)
+    y_data = df['perception'].replace('NON-SEVERE', 0).replace('SEVERE', 2).replace('MEDIUM', 1)
+    del df['class-name']
+    del df['perception']
+    df = df.replace('?', 0).apply(pd.to_numeric)
+    for feature in df.columns:
+        if '_project' in feature: continue
+        rho, p = spearmanr(df[feature],y_data)
+        if p < 0.05 and rho >= 0.7:
+            print(feature+' '+smell+' p:'+str(p)+' rho:'+str(rho))
+
+correlation('spaghetti-code')
+correlation('complex-class')
 extract('blob','org.apache.cxf.tools.corba.processors.idl.IDLLexer',extract_predicted=True)
 extract('complex-class','org.eclipse.cdt.debug.mi.core.command.CommandFactory',extract_predicted=True)
 extract('complex-class','org.eclipse.cdt.debug.mi.core.command.CommandFactory',extract_predicted=False)

@@ -1,0 +1,47 @@
+The Complex Class rule list contains 9 of rules:
+
+     IF (WMC in (56.9829216003418, inf)) THEN prob: [0.0217, 0.2065, 0.7717]
+
+ELSE IF (CBO in (-inf, 8.25312328338623)) AND (num_not_final_not_static_attributes in (-inf, -9.385275840759277)) THEN prob: [0.7049, 0.2623, 0.0328]
+
+ELSE IF (number_final_not_static_methods in (8.802170753479004, inf)) THEN prob: [0.5000, 0.3235, 0.1765]
+
+ELSE IF (NOCS_package in (166.55662536621094, inf)) THEN prob: [0.4250, 0.3500, 0.2250]
+
+ELSE IF (CBO in (-inf, 8.25312328338623)) AND (num_not_final_not_static_attributes in (-9.385275840759277, -0.18444576859474182)) THEN prob: [0.3163, 0.6327, 0.0510]
+
+ELSE IF (WMC in (44.451576232910156, 56.9829216003418)) AND (number_not_final_static_methods in (-8.020503044128418, inf)) THEN prob: [0.0167, 0.8000, 0.1833]
+
+ELSE IF (number_not_final_static_methods in (-8.020503044128418, inf)) THEN prob: [0.0487, 0.9416, 0.0097]
+
+ELSE IF (WMC in (-inf, 36.5136604309082)) THEN prob: [0.1277, 0.7234, 0.1489]
+
+ELSE DEFAULT prob: [0.0200, 0.3400, 0.6400]
+
+==
+
+The Spaghetti Code rule list contains 12 of rules:
+
+     IF (NOMNAMM_package in (-inf, -144.6282958984375)) AND (NIM_type in (-inf, -17.14246368408203)) THEN prob: [0.8276, 0.0057, 0.1667]
+
+ELSE IF (NOCS_package in (-inf, -22.060562133789062)) AND (NOMNAMM_package in (-51.018829345703125, 1077.87890625)) THEN prob: [0.0755, 0.6038, 0.3208]
+
+ELSE IF (NOCS_package in (-inf, -22.060562133789062)) THEN prob: [0.2600, 0.0200, 0.7200]
+
+ELSE IF (NOMNAMM_package in (1077.87890625, 2179.4794921875)) AND (isStatic_type in (-inf, inf)) THEN prob: [0.2533, 0.0667, 0.6800]
+
+ELSE IF (NOMNAMM_package in (-inf, -144.6282958984375)) THEN prob: [0.7903, 0.0161, 0.1935]
+
+ELSE IF (NIM_type in (-17.14246368408203, 62.07438278198242)) AND (number_package_visibility_methods in (-inf, -3.1403796672821045)) THEN prob: [0.5000, 0.0750, 0.4250]
+
+ELSE IF (NOMNAMM_package in (-144.6282958984375, -51.018829345703125)) THEN prob: [0.7000, 0.1500, 0.1500]
+
+ELSE IF (NIM_type in (62.07438278198242, inf)) THEN prob: [0.5385, 0.1624, 0.2991]
+
+ELSE IF (NOCS_package in (-22.060562133789062, 42.16930389404297)) AND (number_constructor_NotDefaultConstructor_methods in (4.169217109680176, inf)) THEN prob: [0.0625, 0.8750, 0.0625]
+
+ELSE IF (number_final_static_methods in (-inf, -1.169346570968628)) THEN prob: [0.2464, 0.3188, 0.4348]
+
+ELSE IF (Readability in (0.6473738551139832, inf)) THEN prob: [0.5909, 0.3636, 0.0455]
+
+ELSE DEFAULT prob: [0.2437, 0.6250, 0.1313]

@@ -194,9 +194,9 @@ def RQ1_fig(smell,n_estimators):
 
 
 if __name__ == "__main__":
-    fake('blob')
+    # fake('blob')
     fake('complex-class')
-    predict('blob',False,260)
-    predict('blob',False,170)
-    RQ1_fig('blob', 260)
+    # predict('blob',False,260)
+    predict('complex-class',False,170)
+    # RQ1_fig('blob', 260)
     RQ1_fig('complex-class', 170)
